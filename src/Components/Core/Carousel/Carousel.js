@@ -4,9 +4,10 @@ import { useState } from "react";
 import AboutJpg from "../../../images/Carausel_1.jpg";
 import PlateJpg from "../../../images/Carausel_2.jpg";
 import OptionJpg from "../../../images/Carausel_3.jpg";
+import gymImg from "../../../images/Carousel_1.jpg";
 
 const Carousel = () => {
-  const images = [AboutJpg, PlateJpg, OptionJpg];
+  const images = [AboutJpg, PlateJpg, OptionJpg, gymImg];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(null);
 

@@ -96,10 +96,10 @@ const ProductCardDemo = () => {
     >
       {imageList.map((data, index) => {
         return (
-          <Grid item md={3} xs={12}>
-            <Card sx={{ maxWidth: { md: 330, xs: 530 } }}>
+          <Grid item md={3} xs={12} sm={6}>
+            <Card sx={{ maxWidth: { md: 330, xs: 530, sm: 530 } }}>
               <CardMedia
-                sx={{ height: { md: 230, xs: 330 } }}
+                sx={{ height: { md: 230, xs: 330, sm: 270 } }}
                 image={data.path}
                 title="green iguana"
               />

@@ -13,7 +13,7 @@ const Footer = () => {
         <Grid container>
           <Grid item md={12}>
             <Typography>
-              Copyright © 2023 reserved 2023{" "}
+              Copyright © 2023 reserved
               <span className="footerText"> Designed By </span> Ashutosh Bajpai
             </Typography>
           </Grid>

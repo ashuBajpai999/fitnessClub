@@ -102,7 +102,7 @@ const VideoCardDemo = () => {
     >
       {ExcerciseList.map((data, index) => {
         return (
-          <Grid item md={3} xs={12} sm={12}>
+          <Grid item md={3} xs={12} sm={6}>
             <Card sx={{ maxWidth: { md: 300 }, maxHeight: { md: 450 } }}>
               <CardMedia
                 component="video"
@@ -115,7 +115,7 @@ const VideoCardDemo = () => {
               />
               <CardContent>
                 <Typography
-                  sx={{ minHeight: { md: 70 } }}
+                  sx={{ minHeight: { md: 70, xs: 70, sm: 70 } }}
                   gutterBottom
                   variant="h5"
                   component="div"

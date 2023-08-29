@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Button, Card, CardMedia, Grid, Typography } from "@mui/material";
 import React, { Fragment } from "react";
 import { useNavigate } from "react-router-dom";
 import ProductCardDemo from "../../Components/Core/Card/ProductCardDemo";
@@ -40,20 +40,32 @@ const Home = () => {
         </Grid>
         <Grid item md={12} xs={12} sm={12}>
           <Grid container marginTop={2}>
-            <Grid item md={7} xs={12} sm={12} paddingLeft={5} paddingRight={5}>
+            <Grid
+              item
+              md={7}
+              xs={12}
+              sm={12}
+              sx={{ pl: { md: 5, xs: 5, sm: 5 }, pr: { md: 5, xs: 5, sm: 5 } }}
+            >
               <AboutUs />
             </Grid>
-            <Grid item md={5} xs={12} sm={12}>
-              <Box
-                component="img"
-                src={Product}
-                sx={{
-                  maxWidth: { md: 505, xs: 550 },
-                  maxHeight: { md: 400, xs: 400 },
-                  ml: { xs: 3 },
-                  mt: { xs: 2 },
-                }}
-              ></Box>
+            <Grid
+              item
+              md={5}
+              xs={12}
+              sm={12}
+              sx={{
+                pl: { md: 0, xs: 5, sm: 5 },
+                pr: { md: 5, xs: 5, sm: 5 },
+                pt: { xs: 2, sm: 2, md: 0 },
+              }}
+            >
+              <Card>
+                <CardMedia
+                  sx={{ height: { md: 300, xs: 330 } }}
+                  image={Product}
+                />
+              </Card>
             </Grid>
           </Grid>
         </Grid>
@@ -68,17 +80,26 @@ const Home = () => {
               marginTop={1}
             >
               <Grid container direction="row">
-                <Grid item md={10.8} xs={9.7}>
+                <Grid item md={10.8} xs={8}>
                   <Typography
                     textAlign="center"
-                    sx={{ ml: { md: 18, xs: 15 } }}
+                    sx={{
+                      ml: { md: 18, xs: 6 },
+                      pt: { md: 0, xs: 0.8 },
+                      pl: { xs: 5 },
+                      fontSize: { md: 30, xs: 17 },
+                    }}
                     color="blue"
-                    fontSize={30}
                   >
                     OUR PRODUCTS
                   </Typography>
                 </Grid>
-                <Grid item md={1.2} xs={2.3} marginTop={0.5}>
+                <Grid
+                  item
+                  md={1.2}
+                  xs={4}
+                  sx={{ mt: { md: 0.5, xs: 0, sm: 0 } }}
+                >
                   <Button
                     id="Products"
                     variant="filled"
@@ -108,24 +129,37 @@ const Home = () => {
               marginTop={1}
             >
               <Grid container direction="row">
-                <Grid item md={10.8} xs={9.7}>
+                <Grid item md={10.8} xs={8}>
                   <Typography
                     textAlign="center"
-                    sx={{ ml: { md: 18 } }}
+                    sx={{
+                      ml: { md: 18, xs: 8 },
+                      pt: { md: 0, xs: 0.8 },
+                      pl: { xs: 5 },
+                      fontSize: { md: 30, xs: 17 },
+                    }}
                     color="blue"
-                    fontSize={30}
                   >
-                    FITNESS EXCERCISES CLIPS
+                    EXCERCISES
                   </Typography>
                 </Grid>
-                <Grid item md={1.2} xs={2.3} marginTop={0.5}>
+                <Grid
+                  item
+                  md={1.2}
+                  xs={4}
+                  sx={{ mt: { md: 0.5, xs: 0, sm: 0 } }}
+                >
                   <Button
                     id="Excercises"
                     variant="filled"
                     onClick={(e) => {
                       openPage(e);
                     }}
-                    sx={{ color: "blue", fontWeight: 550 }}
+                    sx={{
+                      color: "blue",
+                      fontWeight: 550,
+                      textAlign: { xs: "right" },
+                    }}
                   >
                     See all &gt;{">"}
                   </Button>
