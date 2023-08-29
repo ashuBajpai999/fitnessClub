@@ -148,11 +148,19 @@ const ProductCard = () => {
     },
   ];
   return (
-    <Grid container columnSpacing={3} padding={10} rowSpacing={2}>
+    <Grid
+      container
+      columnSpacing={3}
+      paddingTop={10}
+      paddingBottom={10}
+      paddingLeft={5}
+      paddingRight={5}
+      rowSpacing={2}
+    >
       {imageList.map((data, index) => {
         return (
-          <Grid item md={3}>
-            <Card sx={{ maxWidth: 330 }}>
+          <Grid item md={3} xs={12} sm={6}>
+            <Card sx={{ maxWidth: { md: 330, xs: 330, sm: 330 } }}>
               <CardMedia
                 sx={{ height: 230 }}
                 image={data.path}

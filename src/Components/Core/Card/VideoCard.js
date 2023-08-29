@@ -336,7 +336,15 @@ const VideoCard = () => {
     },
   ];
   return (
-    <Grid container columnSpacing={3} padding={10} rowSpacing={2}>
+    <Grid
+      container
+      columnSpacing={3}
+      paddingTop={10}
+      paddingBottom={10}
+      paddingLeft={5}
+      paddingRight={5}
+      rowSpacing={2}
+    >
       {imageList.map((data, index) => {
         return (
           <Grid item md={3}>

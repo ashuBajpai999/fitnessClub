@@ -50,12 +50,16 @@ span {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.footer:hover {
-  height: 110px;
+@media screen and (max-width: 600px) {
+  .footerLink {
+    margin-left: 50;
+  }
 }
+
 .footerText {
   color: white;
 }
+
 .icon:hover {
   font-size: 40px;
 }
@@ -81,7 +85,7 @@ span {
 .carousel-images {
   position: relative;
   height: 82vh;
-  max-width: 1350px;
+  /* max-width: 1350px; */
   margin: auto;
   overflow: hidden;
 }
@@ -89,6 +93,20 @@ span {
 .carousel-images img {
   width: 100%;
   height: 99%;
+}
+@media screen and (max-width: 600px) {
+  .carousel-images {
+    position: relative;
+    height: 42vh;
+    /* max-width: 1350px; */
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .carousel-images img {
+    width: 100%;
+    height: 99%;
+  }
 }
 
 .slide_direction {
@@ -324,19 +342,18 @@ span {
   height: 44px;
 }
 
-@media only screen and (max-width: 599px) {
+@media only screen and (max-width: 600px) {
   .signUpContainer {
     background: #23242a;
     justify-content: center;
     display: flex;
     align-items: center;
-    min-height: 270vh;
   }
 
   .box {
     background: #1c1c1c;
     width: 380px;
-    height: 1050px;
+    height: 1000px;
     position: relative;
     border-radius: 8px;
     overflow: hidden;
@@ -469,8 +486,8 @@ span {
   }
 
   .myImage {
-    margin-top: 10px !important;
-    margin-left: 65px !important;
+    margin-top: 30px !important;
+    margin-left: 40px !important;
   }
 
   .inputBoxForImage {
@@ -509,23 +526,24 @@ span {
   .inputBoxForImage input:focus ~ i {
     height: 44px;
   }
-}
 
-input[type="submit"] {
-  border: none;
-  outline: none;
-  background: #45f3ff;
-  padding: 11px 25px;
-  width: 100px;
-  margin-top: 0px;
-  border-radius: 4px;
-  font-weight: 600;
-  cursor: pointer;
-}
+  input[type="submit"] {
+    border: none;
+    outline: none;
+    background: red !important;
+    padding: 11px 25px !important;
+    width: 100px;
+    margin-top: 30px !important;
+    margin-left: 40px !important;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+  }
 
-/* input[type="submit"]:active {
-  opacity: 0.8;
-} */
+  input[type="submit"]:active {
+    opacity: 0.8;
+  }
+}
 
 /* Start Sign In Form CSS*/
 

@@ -93,8 +93,12 @@ const SignUp = () => {
   };
 
   return (
-    <Grid container className="signUpContainer">
-      <Grid item md={10} xs={10}>
+    <Grid
+      container
+      className="signUpContainer"
+      sx={{ pt: { md: 0, xs: 13 }, pb: { md: 0, xs: 7 } }}
+    >
+      <Grid item md={10} xs={11}>
         <Grid container className="box">
           <Grid item md={12} xs={12}>
             <Grid
@@ -245,8 +249,8 @@ const SignUp = () => {
                         id="myImage"
                         sx={{
                           zIndex: 12,
-                          width: 290,
-                          height: 290,
+                          width: { md: 290, xs: 200 },
+                          height: { md: 290, xs: 200 },
                         }}
                         srcSet={user.image}
                       ></Avatar>
