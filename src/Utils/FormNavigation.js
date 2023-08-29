@@ -1,5 +1,4 @@
 const HandleEnter = (e) => {
-  debugger;
   const keyCode = e.keyCode;
 
   const form = e.target.form.querySelectorAll(

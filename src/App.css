@@ -27,40 +27,38 @@
 .App-link {
   color: #61dafb;
 }
-.backGround_image{
+.backGround_image {
   background-image: url("/src/images/background.jpg");
   height: 96vh;
   width: 100vw;
 }
-.text{
+.text {
   color: #61dafb;
   z-index: 1000;
 }
-span{
-  color:skyblue
+span {
+  color: skyblue;
 }
-.desc{
+.desc {
   background-image: url("/src/images/product_1.jpg");
   height: 68vh;
   width: 46vw;
-  
 }
-.footer{
+.footer {
   background-color: black;
   color: #61dafb;
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.footer:hover{
-  height:110px;
+.footer:hover {
+  height: 110px;
 }
-.footerText{
+.footerText {
   color: white;
 }
-.icon:hover{
+.icon:hover {
   font-size: 40px;
 }
-
 
 @keyframes App-logo-spin {
   from {
@@ -162,7 +160,7 @@ span{
   background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
   position: absolute;
   animation: animate 6s linear infinite;
-  content: '';
+  content: "";
   top: -100%;
   left: -30%;
   width: 890px;
@@ -174,7 +172,7 @@ span{
   background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
   position: absolute;
   animation: animate 6s linear infinite;
-  content: '';
+  content: "";
   top: -100%;
   left: -30%;
   width: 890px;
@@ -242,15 +240,15 @@ span{
   transition: 0.05s;
 }
 
-.inputBox input:valid~.label,
-.inputBox input:focus~.label {
+.inputBox input:valid ~ .label,
+.inputBox input:focus ~ .label {
   color: #45f3ff;
   transform: translateX(0px) translateY(-35px);
   font-size: 0.75em;
 }
 
- .inputBox .error {
-  color: bisque;
+.inputBox .error {
+  color: #45f3ff;
   font-size: 0.75em;
   transform: translateX(0px) translateY(30px);
 }
@@ -268,26 +266,31 @@ span{
   z-index: 9;
 }
 
-.inputBox input:valid~i,
-.inputBox input:focus~i {
+.inputBox input:valid ~ i,
+.inputBox input:focus ~ i {
   height: 44px;
 }
 
 .links {
   display: flex;
   justify-content: space-between;
+  padding-top: 22px;
 }
-
 
 .links a:hover,
 .links a:nth-child(2) {
   color: #45f3ff;
 }
 
+.myImage {
+  margin-top: -40px !important;
+  margin-left: -65px !important;
+}
 .inputBoxForImage {
   position: relative;
   width: 300px;
   margin-top: 350px;
+  margin-left: -60px !important;
 }
 
 .inputBoxForImage input {
@@ -317,10 +320,212 @@ span{
 }
 
 /* .inputBoxForImage input:valid~i, */
-.inputBoxForImage input:focus~i {
+.inputBoxForImage input:focus ~ i {
   height: 44px;
 }
 
+@media only screen and (max-width: 599px) {
+  .signUpContainer {
+    background: #23242a;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    min-height: 270vh;
+  }
+
+  .box {
+    background: #1c1c1c;
+    width: 380px;
+    height: 1050px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .box::before {
+    background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+    position: absolute;
+    animation: animate 6s linear infinite;
+    content: "";
+    top: -100%;
+    left: -30%;
+    width: 890px;
+    height: 730px;
+    transform-origin: bottom right;
+  }
+
+  .box::after {
+    background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+    position: absolute;
+    animation: animate 6s linear infinite;
+    content: "";
+    top: -100%;
+    left: -30%;
+    width: 890px;
+    height: 730px;
+    transform-origin: bottom right;
+    animation-delay: -3s;
+  }
+
+  @keyframes animate {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .form {
+    inset: 2px;
+    z-index: 10;
+    position: absolute;
+    background: #28292d;
+    border-radius: 8px;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form h2 {
+    color: #45f3ff;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+  }
+
+  .inputBox {
+    position: relative;
+    width: 300px;
+    margin-top: 350px;
+  }
+
+  .inputBox input {
+    position: relative;
+    width: 100%;
+    padding: 30px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    z-index: 10;
+  }
+
+  .inputBox span {
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    padding: 0px 10px 10px 0px;
+    font-size: 1em;
+    color: #8f8f8f;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.05s;
+  }
+
+  .inputBox input:valid ~ .label,
+  .inputBox input:focus ~ .label {
+    color: #45f3ff;
+    transform: translateX(0px) translateY(-35px);
+    font-size: 0.75em;
+  }
+
+  .inputBox .error {
+    color: bisque;
+    font-size: 0.75em;
+    transform: translateX(0px) translateY(30px);
+  }
+
+  .inputBox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #45f3ff;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+  }
+
+  .inputBox input:valid ~ i,
+  .inputBox input:focus ~ i {
+    height: 44px;
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -10px !important;
+  }
+
+  .links a:hover,
+  .links a:nth-child(2) {
+    color: #45f3ff;
+  }
+
+  .myImage {
+    margin-top: 10px !important;
+    margin-left: 65px !important;
+  }
+
+  .inputBoxForImage {
+    position: relative;
+    margin-top: 350px;
+    margin-left: 0px !important;
+  }
+
+  .inputBoxForImage input {
+    position: relative;
+    width: 100%;
+    padding: 30px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    z-index: 10;
+  }
+
+  .inputBoxForImage i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #45f3ff;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+  }
+
+  /* .inputBoxForImage input:valid~i, */
+  .inputBoxForImage input:focus ~ i {
+    height: 44px;
+  }
+}
+
+input[type="submit"] {
+  border: none;
+  outline: none;
+  background: #45f3ff;
+  padding: 11px 25px;
+  width: 100px;
+  margin-top: 0px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* input[type="submit"]:active {
+  opacity: 0.8;
+} */
 
 /* Start Sign In Form CSS*/
 
@@ -345,7 +550,7 @@ span{
   background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
   position: absolute;
   animation: animate 6s linear infinite;
-  content: '';
+  content: "";
   top: -50%;
   left: -50%;
   width: 380px;
@@ -357,7 +562,7 @@ span{
   background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
   position: absolute;
   animation: animate 6s linear infinite;
-  content: '';
+  content: "";
   top: -50%;
   left: -50%;
   width: 380px;
@@ -403,7 +608,7 @@ span{
 .signInInputBox input {
   position: relative;
   width: 100%;
-  padding: 20px 10px ;
+  padding: 20px 10px;
   background: transparent;
   border: none;
   outline: none;
@@ -425,8 +630,8 @@ span{
   transition: 0.05s;
 }
 
-.signInInputBox input:valid~span,
-.signInInputBox input:focus~span {
+.signInInputBox input:valid ~ span,
+.signInInputBox input:focus ~ span {
   color: #45f3ff;
   transform: translateX(0px) translateY(-34px);
   font-size: 0.75em;
@@ -445,8 +650,8 @@ span{
   z-index: 9;
 }
 
-.signInInputBox input:valid~i,
-.signInInputBox input:focus~i {
+.signInInputBox input:valid ~ i,
+.signInInputBox input:focus ~ i {
   height: 44px;
 }
 
@@ -472,8 +677,8 @@ input[type="submit"] {
   outline: none;
   background: #45f3ff;
   padding: 11px 25px;
-  width: 100px;
-  margin-top: -6px;
+  width: 200px;
+  margin-top: 0px;
   border-radius: 4px;
   font-weight: 600;
   cursor: pointer;

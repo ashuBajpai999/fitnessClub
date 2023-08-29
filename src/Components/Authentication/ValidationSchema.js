@@ -11,5 +11,5 @@ export const signupSchema = Yup.object({
   password: Yup.string().min(6).required("Please Enter Your Password"),
   cnfPassword: Yup.string()
     .required("Please fill this as same as password")
-    .oneOf([Yup.ref("password"), null, "Password does not matched"]),
+    .oneOf([Yup.ref("password"), null], "Password does not matched"),
 });

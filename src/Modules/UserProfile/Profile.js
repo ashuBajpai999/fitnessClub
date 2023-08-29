@@ -1,21 +1,26 @@
-import { Avatar, Grid, TextField } from "@mui/material";
+import { Avatar, Grid, TextField, Typography } from "@mui/material";
 import React, { Fragment } from "react";
 import { useLocation } from "react-router-dom";
 
 const Profile = (props) => {
-  debugger;
   const location = useLocation();
   return (
     <Fragment>
       <Grid container columnSpacing={3} padding={10} rowSpacing={2}>
-        <Grid item md={5} marginTop={4}>
+        <Grid item md={5} xs={12} sm={12} marginTop={4}>
           <Avatar
-            sx={{ width: 400, height: 400, fontSize: "300px" }}
+            sx={{
+              width: { md: 400, xs: 350 },
+              height: { md: 400, xs: 350 },
+              fontSize: "300px",
+              ml: { xs: 6 },
+            }}
             alt={props.name}
             srcSet={location.state.image}
           ></Avatar>
         </Grid>
-        <Grid item md={7} marginTop={4}>
+        <Grid item md={7} xs={12} sm={12} marginTop={4}>
+          <Typography sx={{ ml: 1, fontSize: "0.85em" }}>Name</Typography>
           <TextField
             // label="Name"
             variant="filled"
@@ -23,6 +28,7 @@ const Profile = (props) => {
             value={location.state.name}
             sx={{ paddingBottom: 2 }}
           />
+          <Typography sx={{ ml: 1, fontSize: "0.85em" }}>E-Mail</Typography>
           <TextField
             // label="Email"
             type="email"
@@ -31,6 +37,9 @@ const Profile = (props) => {
             value={location.state.email}
             sx={{ paddingBottom: 2 }}
           />
+          <Typography sx={{ ml: 1, fontSize: "0.85em" }}>
+            Date of Birth
+          </Typography>
           <TextField
             type="date"
             variant="filled"
@@ -38,21 +47,24 @@ const Profile = (props) => {
             value={location.state.dob}
             sx={{ paddingBottom: 2 }}
           />
+          <Typography sx={{ ml: 1, fontSize: "0.85em" }}>Mobile no.</Typography>
           <TextField
             type="number"
-            label="Mobile no."
+            // label="Mobile no."
             variant="filled"
             fullWidth
             value={location.state.mobile}
             sx={{ paddingBottom: 2 }}
           />
+          <Typography sx={{ ml: 1, fontSize: "0.85em" }}>Weight</Typography>
           <TextField
-            label="Weight"
+            // label="Weight"
             variant="filled"
             fullWidth
             value={location.state.name}
             sx={{ paddingBottom: 2 }}
           />
+          <Typography sx={{ ml: 1, fontSize: "0.85em" }}>Height</Typography>
           <TextField
             // label="Name"
             variant="filled"

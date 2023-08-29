@@ -85,57 +85,52 @@ const ProductCardDemo = () => {
     },
   ];
   return (
-    <Grid container rowSpacing={1} marginTop={1}>
-      <Grid item md={12}>
-        <Grid
-          container
-          direction="row"
-          columnSpacing={2}
-          justifyContent="space-around"
-          alignItems="center"
-        >
-          {imageList.map((data, index) => {
-            return (
-              <Grid item md={3}>
-                <Card sx={{ maxWidth: 330 }}>
-                  <CardMedia
-                    sx={{ height: 230 }}
-                    image={data.path}
-                    title="green iguana"
+    <Grid
+      container
+      direction="row"
+      marginTop={2}
+      columnSpacing={2}
+      spacing={2}
+      justifyContent="space-around"
+      alignItems="center"
+    >
+      {imageList.map((data, index) => {
+        return (
+          <Grid item md={3} xs={12}>
+            <Card sx={{ maxWidth: { md: 330, xs: 530 } }}>
+              <CardMedia
+                sx={{ height: { md: 230, xs: 330 } }}
+                image={data.path}
+                title="green iguana"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  {data.name}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {data.description}
+                  <Link underline="none" href={data.href}>
+                    more
+                  </Link>
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small">
+                  Add To Cart{" "}
+                  <AddShoppingCartIcon
+                    sx={{ marginLeft: 0.5 }}
+                    fontSize="small"
                   />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      {data.name}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      {data.description}
-                      <Link underline="none" href={data.href}>
-                        more
-                      </Link>
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size="small">
-                      Add To Cart{" "}
-                      <AddShoppingCartIcon
-                        sx={{ marginLeft: 0.5 }}
-                        fontSize="small"
-                      />
-                    </Button>
-                    <Button size="small">
-                      Buy Now{" "}
-                      <ShoppingBagIcon
-                        sx={{ marginLeft: 0.5 }}
-                        fontSize="small"
-                      />
-                    </Button>
-                  </CardActions>
-                </Card>
-              </Grid>
-            );
-          })}
-        </Grid>
-      </Grid>
+                </Button>
+                <Button size="small">
+                  Buy Now{" "}
+                  <ShoppingBagIcon sx={{ marginLeft: 0.5 }} fontSize="small" />
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+        );
+      })}
     </Grid>
   );
 };

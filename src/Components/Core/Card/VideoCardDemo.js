@@ -89,48 +89,55 @@ const VideoCardDemo = () => {
     },
   ];
   return (
-    <Grid container rowSpacing={1} marginTop={1}>
-      <Grid item md={12}>
-        <Grid
-          container
-          direction="row"
-          columnSpacing={2}
-          justifyContent="space-around"
-          alignItems="center"
-        >
-          {ExcerciseList.map((data, index) => {
-            return (
-              <Grid item md={3}>
-                <Card sx={{ maxWidth: 300 }}>
-                  <CardMedia
-                    component="video"
-                    autoPlay
-                    muted
-                    loop
-                    sx={{ height: 170 }}
-                    image={data.path}
-                    title={data.title}
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      {data.name}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      {data.description}
-                      <span>more</span>
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size="small">Share</Button>
-                    <Button size="small">Learn More</Button>
-                  </CardActions>
-                </Card>
-              </Grid>
-            );
-          })}
-        </Grid>
-      </Grid>
+    // <Grid container rowSpacing={1} marginTop={1}>
+    //   <Grid item md={12}>
+    <Grid
+      container
+      direction="row"
+      columnSpacing={2}
+      justifyContent="space-around"
+      alignItems="center"
+      marginTop={2}
+      spacing={2}
+    >
+      {ExcerciseList.map((data, index) => {
+        return (
+          <Grid item md={3} xs={12} sm={12}>
+            <Card sx={{ maxWidth: { md: 300 }, maxHeight: { md: 450 } }}>
+              <CardMedia
+                component="video"
+                autoPlay
+                muted
+                loop
+                sx={{ height: { md: 170 } }}
+                image={data.path}
+                title={data.title}
+              />
+              <CardContent>
+                <Typography
+                  sx={{ minHeight: { md: 70 } }}
+                  gutterBottom
+                  variant="h5"
+                  component="div"
+                >
+                  {data.name}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {data.description}
+                  <span>more</span>
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small">Share</Button>
+                <Button size="small">Learn More</Button>
+              </CardActions>
+            </Card>
+          </Grid>
+        );
+      })}
     </Grid>
+    //   </Grid>
+    // </Grid>
   );
 };
 

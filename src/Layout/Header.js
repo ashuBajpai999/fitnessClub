@@ -19,7 +19,7 @@ import "../App.css";
 import Banner from "../images/ashu.jpg";
 import Profile from "../Modules/UserProfile/Profile";
 import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
-const pages = ["HOME", "PRODUCTS", "EXCERCISES", "BLOG"];
+const pages = ["HOME", "PRODUCTS", "EXCERCISES", "BLOG", "SIGNUP", "SIGNIN"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Header = (props) => {
@@ -77,13 +77,19 @@ const Header = (props) => {
   const handleCloseNavMenu = (text) => {
     switch (text) {
       case "HOME":
-        navigate("/");
+        navigate("fitnessClub");
         break;
       case "PRODUCTS":
         navigate("AllProducts");
         break;
       case "EXCERCISES":
         navigate("EXCERCISES");
+        break;
+      case "SIGNUP":
+        navigate("SignUp");
+        break;
+      case "SIGNIN":
+        navigate("SignIn");
         break;
       default:
         break;
@@ -92,7 +98,6 @@ const Header = (props) => {
   };
 
   const handleCloseUserMenu = (text) => {
-    debugger;
     switch (text) {
       case "Profile":
         navigate(`UserProfile`, {
@@ -107,34 +112,21 @@ const Header = (props) => {
     setAnchorElUser(null);
   };
 
-  const HandleNavigation = (innerText) => {
-    switch (innerText) {
-      case "SIGN UP":
-        navigate("SignUp");
-        break;
-      case "SIGN IN":
-        navigate("SignIn");
-        break;
-      default:
-        break;
-    }
-  };
   return (
     <AppBar>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
           <FitnessCenterIcon
-            sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
+            sx={{ display: { xs: "none", sm: "none", md: "flex" }, mr: 1 }}
           />
           <Typography
-            variant="h6"
+            variant="h5"
             noWrap
             component="a"
             href="/"
             sx={{
               mr: 2,
-              display: { xs: "none", md: "flex" },
+              display: { xs: "none", sm: "none", md: "flex" },
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
@@ -145,7 +137,12 @@ const Header = (props) => {
             FITNESS CLUB
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", sm: "flex", md: "none" },
+            }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -175,21 +172,28 @@ const Header = (props) => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem
+                  key={page}
+                  onClick={(e) => {
+                    handleCloseNavMenu(e.currentTarget.innerText);
+                  }}
+                >
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          <FitnessCenterIcon
+            sx={{ display: { xs: "flex", sm: "flex", md: "none" }, mr: 1 }}
+          />
           <Typography
-            variant="h5"
+            variant="h6"
             noWrap
             component="a"
             href=""
             sx={{
               mr: 2,
-              display: { xs: "flex", md: "none" },
+              display: { xs: "flex", sm: "flex", md: "none" },
               flexGrow: 1,
               fontFamily: "monospace",
               fontWeight: 700,
@@ -203,7 +207,7 @@ const Header = (props) => {
           <Box
             sx={{
               flexGrow: 1,
-              display: { xs: "none", md: "flex" },
+              display: { xs: "none", sm: "none", md: "flex" },
               marginLeft: "15em",
             }}
           >
@@ -219,19 +223,9 @@ const Header = (props) => {
               </Button>
             ))}
           </Box>
-          <Button
-            sx={{ color: "white" }}
-            onClick={(e) => HandleNavigation(e.currentTarget.innerText)}
+          <Search
+            sx={{ marginRight: "3em", display: { xs: "none", sm: "flex" } }}
           >
-            Sign Up
-          </Button>
-          <Button
-            sx={{ color: "white" }}
-            onClick={(e) => HandleNavigation(e.currentTarget.innerText)}
-          >
-            Sign in
-          </Button>
-          <Search sx={{ marginRight: "3em" }}>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>

@@ -94,9 +94,9 @@ const SignUp = () => {
 
   return (
     <Grid container className="signUpContainer">
-      <Grid item md={10}>
+      <Grid item md={10} xs={10}>
         <Grid container className="box">
-          <Grid item md={12}>
+          <Grid item md={12} xs={12}>
             <Grid
               component="form"
               id="signUpForm"
@@ -105,13 +105,13 @@ const SignUp = () => {
               class="form"
               direction="row"
             >
-              <Grid item md={12} sx={{ marginTop: -6 }}>
+              <Grid item md={12} xs={12} sx={{ marginTop: -6 }}>
                 <h2>Sign Up</h2>
               </Grid>
               <Grid container>
-                <Grid item md={9}>
-                  <Grid container>
-                    <Grid item md={5} className="inputBox" marginRight={2}>
+                <Grid item md={9} xs={12}>
+                  <Grid container columnGap={2}>
+                    <Grid item md={5} xs={12} sm={5} className="inputBox">
                       <input
                         onKeyDown={handleEnter}
                         onChange={setValueOfUser}
@@ -125,7 +125,13 @@ const SignUp = () => {
                       <i></i>
                       <span className="error">{errors.name}</span>
                     </Grid>
-                    <Grid item md={5} className="inputBox">
+                    <Grid
+                      item
+                      md={5}
+                      xs={12}
+                      marginTop={2}
+                      className="inputBox"
+                    >
                       <input
                         onKeyDown={handleEnter}
                         onChange={setValueOfUser}
@@ -142,8 +148,8 @@ const SignUp = () => {
                     <Grid
                       item
                       md={5}
+                      xs={12}
                       className="inputBox"
-                      marginRight={2}
                       marginTop={2}
                     >
                       <input
@@ -162,9 +168,9 @@ const SignUp = () => {
                     <Grid
                       item
                       md={5}
+                      xs={12}
                       className="inputBox"
                       marginTop={2}
-                      paddingRight={2}
                     >
                       <input
                         onKeyDown={handleEnter}
@@ -174,16 +180,16 @@ const SignUp = () => {
                         type="date"
                         required="required"
                       />
-                      <span>Date of Birth</span>
+                      <span className="label">Date of Birth</span>
                       <i></i>
                       <span className="error">{errors.dob}</span>
                     </Grid>
                     <Grid
                       item
                       md={5}
+                      xs={12}
                       className="inputBox"
                       marginTop={2}
-                      marginRight={2}
                     >
                       <input
                         onKeyDown={handleEnter}
@@ -193,11 +199,17 @@ const SignUp = () => {
                         type="password"
                         required="required"
                       />
-                      <span>Password</span>
+                      <span className="label">Password</span>
                       <i></i>
                       <span className="error">{errors.password}</span>
                     </Grid>
-                    <Grid item md={5} className="inputBox" marginTop={2}>
+                    <Grid
+                      item
+                      md={5}
+                      xs={12}
+                      className="inputBox"
+                      marginTop={2}
+                    >
                       <input
                         onKeyDown={handleEnter}
                         onChange={setValueOfUser}
@@ -206,11 +218,17 @@ const SignUp = () => {
                         type="password"
                         required="required"
                       />
-                      <span>Confirm Password</span>
+                      <span className="label">Confirm Password</span>
                       <i></i>
                       <span className="error">{errors.cnfPassword}</span>
                     </Grid>
-                    <Grid item md={10} className="links" marginTop="29px">
+                    <Grid
+                      item
+                      md={10.2}
+                      xs={12}
+                      className="links"
+                      sx={{ display: { xs: "none", sm: "none", md: "flex" } }}
+                    >
                       <Link underline="none" color="#8f8f8f" fontSize="0.75em">
                         Forgot Password
                       </Link>
@@ -220,17 +238,15 @@ const SignUp = () => {
                     </Grid>
                   </Grid>
                 </Grid>
-                <Grid item md={3}>
+                <Grid item md={3} xs={12}>
                   <Grid container>
-                    <Grid item md={12}>
+                    <Grid item md={12} xs={12} className="myImage">
                       <Avatar
                         id="myImage"
                         sx={{
                           zIndex: 12,
                           width: 290,
                           height: 290,
-                          mt: -4,
-                          ml: -9,
                         }}
                         srcSet={user.image}
                       ></Avatar>
@@ -238,8 +254,9 @@ const SignUp = () => {
                     <Grid
                       item
                       md={12}
+                      xs={12}
                       className="inputBoxForImage"
-                      sx={{ zIndex: 14, ml: -7 }}
+                      sx={{ zIndex: 14 }}
                     >
                       <input
                         defaultValue={user.image}
@@ -249,12 +266,27 @@ const SignUp = () => {
                       />
                       <i></i>
                     </Grid>
+                    <Grid
+                      item
+                      md={10}
+                      xs={12}
+                      className="links"
+                      sx={{ display: { xs: "flex", sm: "flex", md: "none" } }}
+                    >
+                      <Link underline="none" color="#8f8f8f" fontSize="0.75em">
+                        Forgot Password
+                      </Link>
+                      <Link underline="none" fontSize="0.75em" href="SignIn">
+                        SignIn
+                      </Link>
+                    </Grid>
                   </Grid>
                 </Grid>
               </Grid>
-              <Grid item md={12}>
+              <Grid item md={12} xs={12}>
                 <input
                   id="signUpButton"
+                  class="signUpButton"
                   type="submit"
                   value="Signup"
                   onClick={handleParameter}
