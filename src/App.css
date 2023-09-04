@@ -530,7 +530,7 @@ span {
   input[type="submit"] {
     border: none;
     outline: none;
-    background: red !important;
+    background: #45f3ff !important;
     padding: 11px 25px !important;
     width: 100px;
     margin-top: 30px !important;
