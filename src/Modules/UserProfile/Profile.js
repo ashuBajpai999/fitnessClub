@@ -1,4 +1,4 @@
-import { Avatar, Grid, TextField, Typography } from "@mui/material";
+import { Avatar, Button, Grid, TextField, Typography } from "@mui/material";
 import React, { Fragment } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -7,13 +7,13 @@ const Profile = (props) => {
   return (
     <Fragment>
       <Grid container columnSpacing={3} padding={10} rowSpacing={2}>
-        <Grid item md={5} xs={12} sm={12} marginTop={4}>
+        <Grid item md={5} xs={12} sm={12} marginTop="auto" marginBottom="auto">
           <Avatar
             sx={{
-              width: { md: 400, xs: 350 },
-              height: { md: 400, xs: 350 },
+              width: { md: 400, xs: 200 },
+              height: { md: 400, xs: 200 },
               fontSize: "300px",
-              ml: { xs: 6 },
+              m: { xs: "auto" },
             }}
             alt={props.name}
             srcSet={location.state.image}
@@ -72,6 +72,7 @@ const Profile = (props) => {
             value={location.state.name}
             sx={{ paddingBottom: 2 }}
           />
+          <Button variant="contained">Update</Button>
         </Grid>
       </Grid>
     </Fragment>

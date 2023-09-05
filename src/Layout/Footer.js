@@ -16,7 +16,7 @@ const Footer = () => {
               <span className="footerText">
                 Copyright © 2023 reserved Designed By
               </span>
-              &nbsp; ❤ Ashutosh Bajpai ❤
+              &nbsp; Ashutosh Bajpai ❤
             </Typography>
           </Grid>
           <Grid container>

@@ -20,7 +20,7 @@ import Banner from "../images/ashu.jpg";
 import Profile from "../Modules/UserProfile/Profile";
 import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 const pages = ["HOME", "PRODUCTS", "EXCERCISES", "SIGNUP", "SIGNIN"];
-const settings = ["Profile", "Dashboard"];
+const settings = ["Profile"];
 
 const Header = (props) => {
   const [anchorElNav, setAnchorElNav] = useState(null);
