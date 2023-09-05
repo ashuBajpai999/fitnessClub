@@ -4,7 +4,7 @@ import "../../App.css";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 
-const TreadmillDescription = () => {
+const TreadmillDescription = (props) => {
   return (
     <Fragment>
       <Grid container padding={15}>
@@ -32,7 +32,6 @@ const TreadmillDescription = () => {
               </Box>
             </Grid>
             <Grid item md={7}>
-              {/* <Box className="desc" sx={{ borderRadius: 5 }}></Box> */}
               <Card sx={{ maxWidth: 600 }}>
                 <CardMedia
                   sx={{ height: 400 }}

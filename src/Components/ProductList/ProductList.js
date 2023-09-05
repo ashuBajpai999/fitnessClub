@@ -20,7 +20,7 @@ const imageList = [
     path: treadmill,
     description: `Treadmills are generally used for walking, running, or
                       climbing while staying in the same place......`,
-    href: "TreadmillDescription",
+    href: `TreadmillDescription`,
   },
   {
     name: "Cable Rope",
