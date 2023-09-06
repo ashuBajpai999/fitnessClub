@@ -9,7 +9,7 @@ import { Grid, Link } from "@mui/material";
 import treadmill from "../../../images/product_1.jpg";
 import cablerop from "../../../images/product_2.jpg";
 import wheyProtein from "../../../images/product_3.jpg";
-import mbWhey from "../../../images/product_4.jpg";
+import mbWhey from "../../../images/product_4.png";
 import gloves from "../../../images/gloves.jpg";
 import optionMachine from "../../../images/optionMachine.jpg";
 import plate from "../../../images/plates.jpg";

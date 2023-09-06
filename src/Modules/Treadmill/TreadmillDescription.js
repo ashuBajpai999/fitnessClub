@@ -1,10 +1,15 @@
-import { Box, Button, Card, CardMedia, Grid, Typography } from "@mui/material";
-import React, { Fragment, useState } from "react";
-import "../../App.css";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
+import { Box, Button, Card, CardMedia, Grid, Typography } from "@mui/material";
+import React, { Fragment } from "react";
+import { useLocation } from "react-router-dom";
+import "../../App.css";
 
 const TreadmillDescription = (props) => {
+  debugger;
+  const location = useLocation();
+  const url = new URLSearchParams(window.location.search);
+  const index = url.get("index");
   return (
     <Fragment>
       <Grid container padding={15}>
@@ -13,21 +18,10 @@ const TreadmillDescription = (props) => {
             <Grid item md={5} sx={{ wordWrap: "break-word" }}>
               <Box>
                 <Typography variant="h3" sx={{ color: "orange" }}>
-                  Automatic Treadmill
+                  {location.state[index].name}
                 </Typography>
-                <Typography>
-                  A treadmill is a stationary exercise machine that features a
-                  walking or running belt designed for indoor cardio
-                  exercise.Outdoor running is high impact, which can lead to
-                  back, knee, and ankle problems over time. Treadmills prevent
-                  this by offering cushioned running surfaces for shock
-                  absorption.Aerobic exercises, like running or walking on a
-                  treadmill, may make you feel better—whether that’s by making
-                  your heart stronger, helping with weight loss, or lowering
-                  blood pressure.Exercising on a treadmill builds leg muscles
-                  and improves core strength. It also strengthens your heart and
-                  helps prevent osteoporosis by allowing your body to build
-                  strong bones through low impact exercise.
+                <Typography sx={{ textAlign: "justify" }}>
+                  {location.state[index].fullDescription}
                 </Typography>
               </Box>
             </Grid>
@@ -35,7 +29,8 @@ const TreadmillDescription = (props) => {
               <Card sx={{ maxWidth: 600 }}>
                 <CardMedia
                   sx={{ height: 400 }}
-                  image={require("C:/Ashutosh/testingproject/src/images/product_1.jpg")}
+                  // image={require("C:/Ashutosh/testingproject/src/images/product_1.jpg")}
+                  image={location.state[index].path}
                   title="green iguana"
                 />
               </Card>

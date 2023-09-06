@@ -5,10 +5,13 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import React from "react";
+import React, { useState } from "react";
 import excerciseList from "../../ExcerciseList/ExcerciseList";
+import { useNavigate } from "react-router-dom";
 
 const VideoCard = () => {
+  const navigate = useNavigate();
+  const [excercise, setExcercise] = useState(excerciseList);
   return (
     <Grid
       container
@@ -29,7 +32,6 @@ const VideoCard = () => {
                 muted
                 loop
                 src={data.path}
-                title={data.title}
               />
               <CardContent>
                 <Typography
@@ -41,8 +43,14 @@ const VideoCard = () => {
                   {data.name}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  {data.description}
-                  <Link underline="none" href={data.href}>
+                  {data.title}
+                  <Link
+                    underline="none"
+                    sx={{ cursor: "pointer" }}
+                    onClick={() => {
+                      navigate(data.href, { state: { ...excercise } });
+                    }}
+                  >
                     more
                   </Link>
                 </Typography>
