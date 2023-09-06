@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/fitnessClub/static/css/main.e7bbd870.css",
-    "main.js": "/fitnessClub/static/js/main.14942a71.js",
+    "main.js": "/fitnessClub/static/js/main.08852609.js",
     "static/media/Carousel_1.jpg": "/fitnessClub/static/media/Carousel_1.5c73546dbdc46f694f21.jpg",
     "static/media/plank.mp4": "/fitnessClub/static/media/plank.c1b7fb504c7b85c59874.mp4",
     "static/media/reverse_chinups.mp4": "/fitnessClub/static/media/reverse_chinups.e9492f5baf4daf846b11.mp4",
@@ -39,6 +39,7 @@
     "static/media/Tricep_1.mp4": "/fitnessClub/static/media/Tricep_1.c821704e391b23ceac01.mp4",
     "static/media/Carausel_2.jpg": "/fitnessClub/static/media/Carausel_2.d6573d469492dd1cb655.jpg",
     "static/media/Bicep_1.mp4": "/fitnessClub/static/media/Bicep_1.7a8b41a14deeea50b834.mp4",
+    "static/media/product_4.png": "/fitnessClub/static/media/product_4.fcc32fb6309489ed5c64.png",
     "static/media/background.jpg": "/fitnessClub/static/media/background.ae06e0d8d6636698ed7a.jpg",
     "static/media/back_3.mp4": "/fitnessClub/static/media/back_3.892d5fe4cf7bcaf42a7c.mp4",
     "static/media/shoulder_6.mp4": "/fitnessClub/static/media/shoulder_6.52fa6a6c59b878fea463.mp4",
@@ -50,7 +51,6 @@
     "static/media/AboutImg.jpg": "/fitnessClub/static/media/AboutImg.ae8d2faccebc2b3a7e1e.jpg",
     "static/media/chinupsCircle.jpg": "/fitnessClub/static/media/chinupsCircle.97fd8fd9bccb64eab004.jpg",
     "static/media/yogaPads.jpg": "/fitnessClub/static/media/yogaPads.9f3919ddf507497cd79d.jpg",
-    "static/media/product_4.jpg": "/fitnessClub/static/media/product_4.c147e94b8dcab3492e13.jpg",
     "static/media/boxingBag.jpg": "/fitnessClub/static/media/boxingBag.a19097b021fad56f6972.jpg",
     "static/media/ladduDumble.jpg": "/fitnessClub/static/media/ladduDumble.4210178d2bea03dbe3e2.jpg",
     "static/media/product_3.jpg": "/fitnessClub/static/media/product_3.5a56dfe81bc079f4a099.jpg",
@@ -58,10 +58,10 @@
     "static/media/skippingRope.jpg": "/fitnessClub/static/media/skippingRope.cae7842f0d28981f71db.jpg",
     "index.html": "/fitnessClub/index.html",
     "main.e7bbd870.css.map": "/fitnessClub/static/css/main.e7bbd870.css.map",
-    "main.14942a71.js.map": "/fitnessClub/static/js/main.14942a71.js.map"
+    "main.08852609.js.map": "/fitnessClub/static/js/main.08852609.js.map"
   },
   "entrypoints": [
     "static/css/main.e7bbd870.css",
-    "static/js/main.14942a71.js"
+    "static/js/main.08852609.js"
   ]
 }
