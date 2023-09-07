@@ -9,10 +9,18 @@ const Excercise = () => {
   const index = url.get("index");
   return (
     <Fragment>
-      <Grid container padding={15}>
-        <Grid item md={12}>
-          <Grid container justifyContent="center" spacing={8}>
-            <Grid item md={12}>
+      <Grid
+        container
+        sx={{
+          pt: { md: 15, xs: 10, sm: 13 },
+          pl: { md: 15, xs: 5 },
+          pr: { md: 15, xs: 5 },
+          pb: { md: 15, xs: 5 },
+        }}
+      >
+        <Grid item md={12} xs={12} sm={12}>
+          <Grid container justifyContent="center">
+            <Grid item md={12} xs={12} sm={12}>
               <Card sx={{ maxWidth: 1350 }}>
                 <CardMedia
                   sx={{ height: "max-content" }}
@@ -24,12 +32,26 @@ const Excercise = () => {
                 />
               </Card>
             </Grid>
-            <Grid item md={12} sx={{ wordWrap: "break-word" }}>
+            <Grid
+              item
+              md={12}
+              xs={12}
+              sm={12}
+              sx={{ wordWrap: "break-word", mt: { md: 3, xs: 3, sm: 3 } }}
+            >
               <Box>
-                <Typography variant="h3" sx={{ color: "orange" }}>
+                <Typography
+                  variant="h3"
+                  sx={{
+                    color: "orange",
+                    fontSize: { xs: "2rem", md: "3rem", sm: "2rem" },
+                  }}
+                >
                   {location.state[index].name}
                 </Typography>
-                <Typography sx={{ textAlign: "justify", fontStyle: "italic" }}>
+                <Typography
+                  sx={{ textAlign: "justify", fontStyle: "italic", mt: 1.5 }}
+                >
                   {location.state[index].description}
                 </Typography>
               </Box>
