@@ -22,7 +22,7 @@ const VideoCard = () => {
       paddingRight={5}
       rowSpacing={2}
     >
-      {excerciseList.map((data, index) => {
+      {excercise.map((data, index) => {
         return (
           <Grid item md={3} sm={6} xs={12}>
             <Card sx={{ maxWidth: "max-content" }}>

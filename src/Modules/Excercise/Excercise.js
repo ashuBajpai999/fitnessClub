@@ -4,10 +4,8 @@ import { useLocation } from "react-router-dom";
 import "../../App.css";
 
 const Excercise = () => {
-  debugger;
   const location = useLocation();
   const url = new URLSearchParams(window.location.search);
-  const id = url.get("id");
   const index = url.get("index");
   return (
     <Fragment>

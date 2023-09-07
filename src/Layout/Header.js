@@ -61,7 +61,7 @@ const Header = (props) => {
       [theme.breakpoints.up("sm")]: {
         width: "12ch",
         "&:focus": {
-          width: "20ch",
+          width: "12ch",
         },
       },
     },
@@ -134,7 +134,7 @@ const Header = (props) => {
               textDecoration: "none",
             }}
           >
-            FITNESS CLUB
+            FiTnEsScLuB
           </Typography>
 
           <Box
@@ -208,7 +208,6 @@ const Header = (props) => {
             sx={{
               flexGrow: 1,
               display: { xs: "none", sm: "none", md: "flex" },
-              marginLeft: "15em",
             }}
           >
             {pages.map((page) => (
@@ -224,13 +223,16 @@ const Header = (props) => {
             ))}
           </Box>
           <Search
-            sx={{ marginRight: "3em", display: { xs: "none", sm: "flex" } }}
+            sx={{
+              marginRight: { md: "3em", sm: 3 },
+              display: { xs: "none", sm: "flex" },
+            }}
           >
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
-              sx={{ width: "14rem" }}
+              sx={{ width: { md: "14rem" } }}
               placeholder="Search…"
               inputProps={{ "aria-label": "search" }}
             />

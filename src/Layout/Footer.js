@@ -20,22 +20,22 @@ const Footer = () => {
             </Typography>
           </Grid>
           <Grid container>
-            <Grid item xs={1.3} sm={0.6} md={0.4}>
+            <Grid item xs={3} sm={0.6} md={0.4}>
               <Link href="https://facebook.com">
                 <FacebookIcon fontSize="large" className="icon" />
               </Link>
             </Grid>
-            <Grid item xs={1.3} sm={0.6} md={0.4}>
+            <Grid item xs={3} sm={0.6} md={0.4}>
               <Link href="https://instagram.com">
                 <InstagramIcon fontSize="large" className="icon" />
               </Link>
             </Grid>
-            <Grid item xs={1.3} sm={0.6} md={0.4}>
+            <Grid item xs={3} sm={0.6} md={0.4}>
               <Link href="https://twitter.com">
                 <TwitterIcon fontSize="large" className="icon" />
               </Link>
             </Grid>
-            <Grid item xs={1.3} sm={0.6} md={0.4}>
+            <Grid item xs={3} sm={0.6} md={0.4}>
               <Link href="https://youtube.com">
                 <YouTubeIcon fontSize="large" className="icon" />
               </Link>

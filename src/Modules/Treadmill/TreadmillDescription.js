@@ -6,16 +6,28 @@ import { useLocation } from "react-router-dom";
 import "../../App.css";
 
 const TreadmillDescription = (props) => {
-  debugger;
   const location = useLocation();
   const url = new URLSearchParams(window.location.search);
   const index = url.get("index");
   return (
     <Fragment>
-      <Grid container padding={15}>
-        <Grid item md={12}>
-          <Grid container justifyContent="center" spacing={8}>
-            <Grid item md={5} sx={{ wordWrap: "break-word" }}>
+      <Grid
+        container
+        sx={{
+          pt: { md: 15, xs: 10, sm: 13 },
+          pl: { md: 15, xs: 5 },
+          pr: { md: 15, xs: 5 },
+          pb: { md: 15, xs: 5 },
+        }}
+      >
+        <Grid item md={12} xs={12} sm={12}>
+          <Grid container justifyContent="center">
+            <Grid
+              item
+              md={5}
+              xs={12}
+              sx={{ wordWrap: "break-word", pb: { xs: 4 } }}
+            >
               <Box>
                 <Typography variant="h3" sx={{ color: "orange" }}>
                   {location.state[index].name}
@@ -25,27 +37,27 @@ const TreadmillDescription = (props) => {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item md={7}>
-              <Card sx={{ maxWidth: 600 }}>
+            <Grid item md={7} xs={12} sx={{ pl: { md: 8 } }}>
+              <Card sx={{ maxWidth: { md: 600 } }}>
                 <CardMedia
-                  sx={{ height: 400 }}
-                  // image={require("C:/Ashutosh/testingproject/src/images/product_1.jpg")}
+                  sx={{ height: { md: 400, xs: 240 } }}
                   image={location.state[index].path}
                   title="green iguana"
                 />
               </Card>
-            </Grid>
-          </Grid>
-          <Grid container>
-            <Grid item md={1.8}>
-              <Button variant="contained">
-                Add To Cart <AddShoppingCartIcon sx={{ marginLeft: 0.5 }} />
-              </Button>
-            </Grid>
-            <Grid item md={1.5}>
-              <Button variant="contained">
-                Buy Now <ShoppingBagIcon sx={{ marginLeft: 0.5 }} />
-              </Button>
+              <Grid container sx={{ mt: { xs: 2 } }}>
+                <Grid item md={6} xs={6.7} sm={3}>
+                  <Button variant="contained" size="small">
+                    Add To Cart
+                    <AddShoppingCartIcon sx={{ marginLeft: { md: 0.5 } }} />
+                  </Button>
+                </Grid>
+                <Grid item md={6} xs={5.3} sm={3}>
+                  <Button variant="contained" size="small">
+                    Buy Now <ShoppingBagIcon sx={{ marginLeft: { md: 0.5 } }} />
+                  </Button>
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
