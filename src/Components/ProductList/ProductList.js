@@ -16,6 +16,7 @@ import gloves from "../../images/gloves.jpg";
 const imageList = [
   {
     name: "Treadmill",
+    index: 0,
     id: "treadmill",
     path: treadmill,
     fullDescription: `A treadmill is a stationary exercise machine that features a
@@ -36,6 +37,7 @@ const imageList = [
   },
   {
     name: "Cable Rope",
+    index: 1,
     id: "cableRope",
     path: cablerop,
     fullDescription: `Cable ropes are a versatile piece of equipment that can be used
@@ -46,6 +48,7 @@ const imageList = [
   },
   {
     name: "Whey Protein",
+    index: 2,
     id: "whyeProtein",
     path: wheyProtein,
     fullDescription: `Gold Standard Whey Protein is a popular protein supplement that is used by 
@@ -56,6 +59,7 @@ const imageList = [
   },
   {
     name: "MB Whey",
+    index: 3,
     id: "mbWhey",
     path: mbWhey,
     fullDescription: `MuscleBlaze Whey Protein is a popular bodybuilding supplement brand in India that 
@@ -66,6 +70,7 @@ const imageList = [
   },
   {
     name: "Skiping Rope",
+    index: 4,
     id: "skipingRope",
     path: skipingRope,
     fullDescription: ``,
@@ -75,6 +80,7 @@ const imageList = [
   },
   {
     name: "Gloves",
+    index: 5,
     id: "gloves",
     path: gloves,
     fullDescription: ``,
@@ -84,6 +90,7 @@ const imageList = [
   },
   {
     name: "Plates",
+    index: 6,
     id: "plate",
     path: plate,
     fullDescription: ``,
@@ -93,6 +100,7 @@ const imageList = [
   },
   {
     name: "Multipurpose Machine",
+    index: 7,
     id: "optionMachine",
     path: optionMachine,
     fullDescription: ``,
@@ -102,6 +110,7 @@ const imageList = [
   },
   {
     name: "Small Dumble",
+    index: 8,
     id: "ladduDumble",
     path: ladduDumble,
     fullDescription: ``,
@@ -111,6 +120,7 @@ const imageList = [
   },
   {
     name: "Chin Ups Circle",
+    index: 9,
     id: "chinupsCircle",
     path: chinupsCircle,
     fullDescription: ``,
@@ -120,6 +130,7 @@ const imageList = [
   },
   {
     name: "Dumble",
+    index: 10,
     id: "dumble",
     path: dumble,
     fullDescription: ``,
@@ -129,6 +140,7 @@ const imageList = [
   },
   {
     name: "Yoga Pad",
+    index: 11,
     id: "yogaPad",
     path: yogaPad,
     fullDescription: ``,
@@ -138,6 +150,7 @@ const imageList = [
   },
   {
     name: "Rod With Plates",
+    index: 12,
     id: "rodWithPlate",
     path: rodWithPlate,
     fullDescription: ``,
@@ -147,6 +160,7 @@ const imageList = [
   },
   {
     name: "Combo",
+    index: 13,
     id: "laduuAndAll",
     path: laduuAndAll,
     fullDescription: ``,
@@ -156,6 +170,7 @@ const imageList = [
   },
   {
     name: "Boxing Bag",
+    index: 14,
     id: "boxingBag",
     path: boxingBag,
     fullDescription: ``,

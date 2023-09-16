@@ -1,6 +1,4 @@
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
-import { Box, Button, Card, CardMedia, Grid, Typography } from "@mui/material";
+import { Box, Card, CardMedia, Grid, Typography } from "@mui/material";
 import React, { Fragment } from "react";
 import { useLocation } from "react-router-dom";
 import "../../App.css";
@@ -45,19 +43,6 @@ const TreadmillDescription = (props) => {
                   title="green iguana"
                 />
               </Card>
-              <Grid container sx={{ mt: { xs: 2 } }}>
-                <Grid item md={6} xs={6.7} sm={3}>
-                  <Button variant="contained" size="small">
-                    Add To Cart
-                    <AddShoppingCartIcon sx={{ marginLeft: { md: 0.5 } }} />
-                  </Button>
-                </Grid>
-                <Grid item md={6} xs={5.3} sm={3}>
-                  <Button variant="contained" size="small">
-                    Buy Now <ShoppingBagIcon sx={{ marginLeft: { md: 0.5 } }} />
-                  </Button>
-                </Grid>
-              </Grid>
             </Grid>
           </Grid>
         </Grid>

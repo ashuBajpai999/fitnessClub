@@ -1,9 +1,5 @@
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import { Grid, Link } from "@mui/material";
-import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
@@ -13,7 +9,7 @@ import imageList from "../../../Components/ProductList/ProductList";
 
 const ProductCard = () => {
   const navigate = useNavigate();
-  const [productData, setProductData] = useState(imageList);
+  const [productData] = useState(imageList);
   return (
     <Grid
       container
@@ -50,19 +46,6 @@ const ProductCard = () => {
                   </Link>
                 </Typography>
               </CardContent>
-              <CardActions>
-                <Button size="small">
-                  Add To Cart{" "}
-                  <AddShoppingCartIcon
-                    sx={{ marginLeft: 0.5 }}
-                    fontSize="small"
-                  />
-                </Button>
-                <Button size="small">
-                  Buy Now{" "}
-                  <ShoppingBagIcon sx={{ marginLeft: 0.5 }} fontSize="small" />
-                </Button>
-              </CardActions>
             </Card>
           </Grid>
         );
