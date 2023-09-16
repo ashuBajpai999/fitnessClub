@@ -10,6 +10,11 @@ import imageList from "../../ProductList/ProductList";
 const ProductCardDemo = () => {
   const [product] = useState(imageList);
   const productList = product.slice(0, 8);
+  debugger;
+  const newList = productList.map((obj) => ({
+    ...obj,
+    href: `AllProducts/TreadmillDescription?index=${obj.index}`,
+  }));
   const navigate = useNavigate();
   return (
     <Grid
@@ -21,7 +26,7 @@ const ProductCardDemo = () => {
       justifyContent="space-around"
       alignItems="center"
     >
-      {productList.map((data, index) => {
+      {newList.map((data, index) => {
         return (
           <Grid item md={3} xs={12} sm={6}>
             <Card sx={{ maxWidth: { md: 330, xs: 530, sm: 530 } }}>
@@ -41,7 +46,7 @@ const ProductCardDemo = () => {
                     sx={{ cursor: "pointer" }}
                     onClick={() => {
                       navigate(`/${data.href}`, {
-                        state: { ...product },
+                        state: { ...newList },
                       });
                     }}
                   >
