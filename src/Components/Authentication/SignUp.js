@@ -34,16 +34,10 @@ const SignUp = () => {
       reader.readAsDataURL(file);
     });
   };
-  let img = document.getElementById("myImage");
   const onFileSelected = async (e) => {
     const file = e.target.files[0];
     const url = await readURL(file);
     name = e.target.name;
-    // let img = document.getElementById("myImage");
-    // if (img) {
-    //   img.src = url;
-    //   document.querySelector("#myImage").setAttribute("srcSet", url);
-    // }
     setUser({ ...user, [name]: url });
   };
   const postData = async (e) => {

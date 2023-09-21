@@ -1,10 +1,10 @@
+import FacebookIcon from "@mui/icons-material/Facebook";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { Grid, Link, Typography } from "@mui/material";
 import React from "react";
 import "../App.css";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import YouTubeIcon from "@mui/icons-material/YouTube";
 
 const Footer = () => {
   return (
@@ -21,23 +21,29 @@ const Footer = () => {
           </Grid>
           <Grid container>
             <Grid item xs={3} sm={0.6} md={0.4}>
-              <Link href="https://facebook.com">
+              <Link
+                target="_blank"
+                href="https://m.facebook.com/profile.php/?id=100004580445865&name=xhp_nt__fb__action__open_user"
+              >
                 <FacebookIcon fontSize="large" className="icon" />
               </Link>
             </Grid>
             <Grid item xs={3} sm={0.6} md={0.4}>
-              <Link href="https://instagram.com">
+              <Link href="https://instagram.com/surya9870/" target="_blank">
                 <InstagramIcon fontSize="large" className="icon" />
               </Link>
             </Grid>
             <Grid item xs={3} sm={0.6} md={0.4}>
-              <Link href="https://twitter.com">
-                <TwitterIcon fontSize="large" className="icon" />
+              <Link
+                href="https://in.linkedin.com/in/ashutosh-bajpai-6b8baa152"
+                target="_blank"
+              >
+                <LinkedInIcon fontSize="large" className="icon" />
               </Link>
             </Grid>
             <Grid item xs={3} sm={0.6} md={0.4}>
-              <Link href="https://youtube.com">
-                <YouTubeIcon fontSize="large" className="icon" />
+              <Link href="https://github.com/ashuBajpai999/" target="_blank">
+                <GitHubIcon fontSize="large" className="icon" />
               </Link>
             </Grid>
           </Grid>
