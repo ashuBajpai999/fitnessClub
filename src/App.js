@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import ProductCard from "./Components/Core/Card/ProductCard";
 import VideoCard from "./Components/Core/Card/VideoCard";
@@ -12,7 +12,6 @@ import Excercise from "./Modules/Excercise/Excercise";
 
 const App = () => {
   return (
-    <BrowserRouter>
       <Routes>
         <Route path="/*" element={<MainDashboard />}>
           <Route path="fitnessClub" element={<Home />} />
@@ -28,7 +27,6 @@ const App = () => {
           <Route path="EXCERCISES/Excercise/" element={<Excercise />} />
         </Route>
       </Routes>
-    </BrowserRouter>
   );
 };
 
