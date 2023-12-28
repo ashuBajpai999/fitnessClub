@@ -5,8 +5,9 @@ import "../../App.css";
 
 const TreadmillDescription = (props) => {
   const location = useLocation();
-  const url = new URLSearchParams(window.location.search);
-  const index = url.get("index");
+  const hash = window.location.hash;
+  const urlParams = new URLSearchParams(hash.split("?")[1]);
+  const index = urlParams.get("index");
   return (
     <Fragment>
       <Grid
