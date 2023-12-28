@@ -1,30 +1,33 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import SignIn from "./Components/Authentication/SignIn";
-import SignUp from "./Components/Authentication/SignUp";
-import ProductCard from "./Components/Core/Card/ProductCard";
-import VideoCard from "./Components/Core/Card/VideoCard";
+import ExcerciseDescriptionRoute from "./Components/AppRoutes/ExcerciseDescriptionRoute";
+import ExcerciseRoute from "./Components/AppRoutes/ExcerciseRoute";
+import HomeRoute from "./Components/AppRoutes/HomeRoute";
+import ProductDescriptionRoute from "./Components/AppRoutes/ProductDescriptionRoute";
+import ProductRoute from "./Components/AppRoutes/ProductRoute";
+import SignInRoute from "./Components/AppRoutes/SignInRoute";
+import SignUpRoute from "./Components/AppRoutes/SignUpRoute";
+import UserProfileRoute from "./Components/AppRoutes/UserProfileRoute";
 import MainDashboard from "./Modules/Dashboard/MainDashboard";
-import Excercise from "./Modules/Excercise/Excercise";
-import Home from "./Modules/Home/Home";
-import TreadmillDescription from "./Modules/Treadmill/TreadmillDescription";
-import Profile from "./Modules/UserProfile/Profile";
 
 const App = () => {
+  const getRoute = (path, component) => {
+    return {
+      path: path,
+      element: component,
+    };
+  };
   return (
     <Routes>
-      <Route path="/*" element={<MainDashboard />}>
-        <Route path="fitnessClub" element={<Home />} />
-        <Route path="AllProducts/" element={<ProductCard />} />
-        <Route path="Excercises/" element={<VideoCard />} />
-        <Route
-          path="AllProducts/TreadmillDescription/"
-          element={<TreadmillDescription />}
-        />
-        <Route path="UserProfile/" element={<Profile />} />
-        <Route path="SignUp/" element={<SignUp />} />
-        <Route path="SignIn/" element={<SignIn />} />
-        <Route path="EXCERCISES/Excercise/" element={<Excercise />} />
+      <Route {...getRoute("/", <MainDashboard />)}>
+        {HomeRoute()}
+        {ProductRoute()}
+        {ExcerciseRoute()}
+        {ProductDescriptionRoute()}
+        {SignInRoute()}
+        {SignUpRoute()}
+        {UserProfileRoute()}
+        {ExcerciseDescriptionRoute()}
       </Route>
     </Routes>
   );
