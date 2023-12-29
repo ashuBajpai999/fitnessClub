@@ -32,6 +32,13 @@
   height: 96vh;
   width: 100vw;
 }
+
+.AboutUs {
+  text-align: justify;
+  font-family: "Century";
+  margin-top: 0;
+  line-height: 0.6cm;
+}
 .text {
   color: #61dafb;
   z-index: 1000;
@@ -73,8 +80,6 @@ span {
   }
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
-
 .App-header {
   font-size: 1rem;
   text-align: center;
@@ -85,7 +90,6 @@ span {
 .carousel-images {
   position: relative;
   height: 82vh;
-  /* max-width: 1350px; */
   margin: auto;
   overflow: hidden;
 }
@@ -98,7 +102,6 @@ span {
   .carousel-images {
     position: relative;
     height: 42vh;
-    /* max-width: 1350px; */
     margin: auto;
     overflow: hidden;
   }
@@ -119,7 +122,6 @@ span {
   background-color: #fb666675;
   color: #fff;
   padding: 13px 8px 8px 13px;
-  /* margin: 20px 20px; */
   border-radius: 50%;
   position: absolute;
   top: 0;

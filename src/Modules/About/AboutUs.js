@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import React, { Fragment } from "react";
 
 const AboutUs = () => {
@@ -6,7 +6,7 @@ const AboutUs = () => {
     <Fragment>
       <Grid container>
         <Grid item>
-          <Typography sx={{ textAlign: "justify", fontFamily: "Century" }}>
+          <p class="AboutUs">
             Welcome to <span>Fitness Club</span> Gym! Our mission is to provide
             a safe and supportive environment where people of all fitness levels
             can achieve their health and wellness goals. We believe that fitness
@@ -23,7 +23,7 @@ const AboutUs = () => {
             variety of social events and activities throughout the year. Thank
             you for considering <span>Fitness Club</span> Gym for your fitness
             needs. We look forward to helping you achieve your goals!
-          </Typography>
+          </p>
         </Grid>
       </Grid>
     </Fragment>
