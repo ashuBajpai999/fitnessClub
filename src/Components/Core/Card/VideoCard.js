@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 
 const VideoCard = () => {
   const navigate = useNavigate();
-  const [excercise, setExcercise] = useState(excerciseList);
+  const [excercise] = useState(excerciseList);
   return (
     <Grid
       container

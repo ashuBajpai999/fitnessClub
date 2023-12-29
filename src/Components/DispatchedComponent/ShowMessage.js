@@ -13,9 +13,6 @@ const ShowMessage = () => {
   const { snackbarOpen, snackbarType, snackbarTime, snackbarMessage } =
     useSelector((state) => state.snackbar);
   const handleClose = (event, reason) => {
-    // if (reason === "clickaway") {
-    //   return;
-    // }
     dispatch(setSnackbar(false, snackbarType, snackbarMessage));
   };
 
@@ -34,19 +31,13 @@ const ShowMessage = () => {
           snackbarType === "success"
             ? {
                 width: "100%",
-
-                //   backgroundColor: "#ebccd1 !important",
-                //  color: " #a94442 !important",
-
                 boxShadow: "none !important",
                 marginTop: "40px !important",
               }
             : {
                 width: "100%",
-
                 backgroundColor: "#ebccd1 !important",
                 color: " #a94442 !important",
-
                 boxShadow: "none !important",
                 marginTop: "40px !important",
               }

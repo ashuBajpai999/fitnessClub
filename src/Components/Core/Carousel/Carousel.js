@@ -1,11 +1,11 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import AboutJpg from "../../../images/Carausel_1.jpg";
-import PlateJpg from "../../../images/Carausel_2.jpg";
-import OptionJpg from "../../../images/Carausel_3.jpg";
-import gymImg from "../../../images/Carousel_1.jpg";
-import Ganesha from "../../../images/DesktopGanesha_1.png";
+import AboutJpg from "../../../images/Carausel_1.webp";
+import PlateJpg from "../../../images/Carausel_2.webp";
+import OptionJpg from "../../../images/Carausel_3.webp";
+import gymImg from "../../../images/Carousel_1.webp";
+import Ganesha from "../../../images/GanehshaInMiddle.webp";
 
 const Carousel = () => {
   const images = [Ganesha, AboutJpg, PlateJpg, OptionJpg, gymImg];

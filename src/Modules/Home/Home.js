@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import ProductCardDemo from "../../Components/Core/Card/ProductCardDemo";
 import VideoCardDemo from "../../Components/Core/Card/VideoCardDemo";
 import Carousel from "../../Components/Core/Carousel/Carousel";
-import Product from "../../images/AboutImg.jpg";
+import Product from "../../images/AboutImg.webp";
 import AboutUs from "../About/AboutUs";
 
 const Home = () => {

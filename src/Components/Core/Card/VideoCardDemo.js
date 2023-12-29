@@ -89,8 +89,6 @@ const VideoCardDemo = () => {
     },
   ];
   return (
-    // <Grid container rowSpacing={1} marginTop={1}>
-    //   <Grid item md={12}>
     <Grid
       container
       direction="row"
@@ -136,8 +134,6 @@ const VideoCardDemo = () => {
         );
       })}
     </Grid>
-    //   </Grid>
-    // </Grid>
   );
 };
 

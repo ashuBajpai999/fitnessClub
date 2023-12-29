@@ -28,7 +28,7 @@
   color: #61dafb;
 }
 .backGround_image {
-  background-image: url("/src/images/background.jpg");
+  background-image: url("/src/images/background.webp");
   height: 96vh;
   width: 100vw;
 }
@@ -40,7 +40,7 @@ span {
   color: skyblue;
 }
 .desc {
-  background-image: url("/src/images/product_1.jpg");
+  background-image: url("/src/images/product_1.webp");
   height: 68vh;
   width: 46vw;
 }

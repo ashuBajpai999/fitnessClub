@@ -1,4 +1,4 @@
-export const SET_SNACKBAR = "myGSTCafeSnackBar";
+export const SET_SNACKBAR = "fitnessClubSnackBar";
 const DEFAULT_TIME = 4000;
 const initialState = {
   snackbarOpen: false,
