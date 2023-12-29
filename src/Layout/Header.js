@@ -1,4 +1,4 @@
-import AdbIcon from "@mui/icons-material/Adb";
+import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import { InputBase, alpha, styled } from "@mui/material";
@@ -16,9 +16,6 @@ import Typography from "@mui/material/Typography";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
-import Banner from "../images/ashu.jpg";
-import Profile from "../Modules/UserProfile/Profile";
-import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 const pages = ["HOME", "PRODUCTS", "EXCERCISES", "SIGNUP", "SIGNIN"];
 const settings = ["Profile"];
 
@@ -77,7 +74,7 @@ const Header = (props) => {
   const handleCloseNavMenu = (text) => {
     switch (text) {
       case "HOME":
-        navigate("fitnessClub");
+        navigate("/");
         break;
       case "PRODUCTS":
         navigate("AllProducts");
