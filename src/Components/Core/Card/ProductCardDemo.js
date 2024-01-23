@@ -10,7 +10,6 @@ import imageList from "../../ProductList/ProductList";
 const ProductCardDemo = () => {
   const [product] = useState(imageList);
   const productList = product.slice(0, 8);
-  debugger;
   const newList = productList.map((obj) => ({
     ...obj,
     href: `AllProducts/TreadmillDescription?index=${obj.index}`,
