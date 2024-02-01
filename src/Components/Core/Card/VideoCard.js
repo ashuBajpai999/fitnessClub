@@ -5,13 +5,53 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import React, { useState } from "react";
-import excerciseList from "../../ExcerciseList/ExcerciseList";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import {
+  legExcercise,
+  chestExcercise,
+  absExcercise,
+  backExcercise,
+  tricepExcercise,
+  bicepExcercise,
+  shoulderExcercise,
+} from "../../ExcerciseList/ExcerciseList";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const VideoCard = () => {
   const navigate = useNavigate();
-  const [excercise] = useState(excerciseList);
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const receivedValue = queryParams.get("E");
+  const [excercise, setExcercise] = useState([]);
+
+  useEffect(() => {
+    switch (receivedValue) {
+      case "Leg":
+        setExcercise(legExcercise);
+        break;
+      case "Biceps":
+        setExcercise(bicepExcercise);
+        break;
+      case "Tricep":
+        setExcercise(tricepExcercise);
+        break;
+      case "Shoulder":
+        setExcercise(shoulderExcercise);
+        break;
+      case "Back":
+        setExcercise(backExcercise);
+        break;
+      case "Chest":
+        setExcercise(chestExcercise);
+        break;
+      case "ABS":
+        setExcercise(absExcercise);
+        break;
+      default:
+        break;
+    }
+  }, [receivedValue]);
+
   return (
     <Grid
       container

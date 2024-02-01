@@ -20,6 +20,46 @@ const pages = ["HOME", "PRODUCTS", "EXCERCISES", "SIGNUP", "SIGNIN"];
 const settings = ["Profile"];
 
 const Header = (props) => {
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    switch (event.currentTarget.innerText) {
+      case "Leg":
+        navigate("Excercises?E=Leg");
+        setAnchorEl(null);
+        break;
+      case "Biceps":
+        navigate("Excercises?E=Biceps");
+        setAnchorEl(null);
+        break;
+      case "Tricep":
+        navigate("Excercises?E=Tricep");
+        setAnchorEl(null);
+        break;
+      case "Shoulder":
+        navigate("Excercises?E=Shoulder");
+        setAnchorEl(null);
+        break;
+      case "Back":
+        navigate("Excercises?E=Back");
+        setAnchorEl(null);
+        break;
+      case "Chest":
+        navigate("Excercises?E=Chest");
+        setAnchorEl(null);
+        break;
+      case "ABS":
+        navigate("Excercises?E=ABS");
+        setAnchorEl(null);
+        break;
+      default:
+        setAnchorEl(null);
+        break;
+    }
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const navigate = useNavigate();
@@ -71,7 +111,7 @@ const Header = (props) => {
     setAnchorElUser(event.currentTarget);
   };
 
-  const handleCloseNavMenu = (text) => {
+  const handleCloseNavMenu = (event, text) => {
     switch (text) {
       case "HOME":
         navigate("/");
@@ -80,7 +120,7 @@ const Header = (props) => {
         navigate("AllProducts");
         break;
       case "EXCERCISES":
-        navigate("EXCERCISES");
+        setAnchorEl(event.currentTarget);
         break;
       case "SIGNUP":
         navigate("SignUp");
@@ -172,12 +212,29 @@ const Header = (props) => {
                 <MenuItem
                   key={page}
                   onClick={(e) => {
-                    handleCloseNavMenu(e.currentTarget.innerText);
+                    handleCloseNavMenu(e, e.currentTarget.innerText);
                   }}
                 >
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
+            </Menu>
+            <Menu
+              id="basic-menu"
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+              MenuListProps={{
+                "aria-labelledby": "basic-button",
+              }}
+            >
+              <MenuItem onClick={handleClick}>Leg</MenuItem>
+              <MenuItem onClick={handleClick}>Biceps</MenuItem>
+              <MenuItem onClick={handleClick}>Tricep</MenuItem>
+              <MenuItem onClick={handleClick}>Shoulder</MenuItem>
+              <MenuItem onClick={handleClick}>Back</MenuItem>
+              <MenuItem onClick={handleClick}>Chest</MenuItem>
+              <MenuItem onClick={handleClick}>ABS</MenuItem>
             </Menu>
           </Box>
           <FitnessCenterIcon
@@ -199,7 +256,7 @@ const Header = (props) => {
               textDecoration: "none",
             }}
           >
-            FITNESS CLUB
+            FiTnEsScLuB
           </Typography>
           <Box
             sx={{
@@ -209,9 +266,13 @@ const Header = (props) => {
           >
             {pages.map((page) => (
               <Button
+                id="basic-button"
+                aria-controls={open ? "basic-menu" : undefined}
+                aria-haspopup="true"
+                aria-expanded={open ? "true" : undefined}
                 key={page}
                 onClick={(e) => {
-                  handleCloseNavMenu(e.currentTarget.innerText);
+                  handleCloseNavMenu(e, e.currentTarget.innerText);
                 }}
                 sx={{ my: 2, color: "white", display: "block" }}
               >

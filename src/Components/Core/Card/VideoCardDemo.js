@@ -4,10 +4,10 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import excerciseList from "../../ExcerciseList/ExcerciseList";
+import { backExcercise } from "../../ExcerciseList/ExcerciseList";
 
 const VideoCardDemo = () => {
-  const [excercise] = useState(excerciseList);
+  const [excercise] = useState(backExcercise);
   const excercisesList = excercise.slice(0, 8);
   const newList = excercisesList.map((obj) => ({
     ...obj,
@@ -31,7 +31,7 @@ const VideoCardDemo = () => {
             <Card sx={{ maxWidth: { md: 300 }, maxHeight: { md: 450 } }}>
               <CardMedia
                 component="video"
-                autoPlay
+                controls
                 muted
                 loop
                 sx={{ height: { md: 170 } }}

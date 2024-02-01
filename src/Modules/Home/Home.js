@@ -15,7 +15,7 @@ const Home = () => {
         navigate("/AllProducts");
         break;
       case "Excercises":
-        navigate("/Excercises");
+        navigate("/Excercises?E=Back");
         break;
       default:
         break;
