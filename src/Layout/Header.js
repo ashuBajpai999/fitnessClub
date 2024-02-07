@@ -17,6 +17,15 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
 const pages = ["HOME", "PRODUCTS", "EXCERCISES", "SIGNUP", "SIGNIN"];
+const excercises = [
+  "Leg",
+  "Biceps",
+  "Tricep",
+  "Shoulder",
+  "Back",
+  "Chest",
+  "ABS",
+];
 const settings = ["Profile"];
 
 const Header = (props) => {
@@ -228,13 +237,11 @@ const Header = (props) => {
                 "aria-labelledby": "basic-button",
               }}
             >
-              <MenuItem onClick={handleClick}>Leg</MenuItem>
-              <MenuItem onClick={handleClick}>Biceps</MenuItem>
-              <MenuItem onClick={handleClick}>Tricep</MenuItem>
-              <MenuItem onClick={handleClick}>Shoulder</MenuItem>
-              <MenuItem onClick={handleClick}>Back</MenuItem>
-              <MenuItem onClick={handleClick}>Chest</MenuItem>
-              <MenuItem onClick={handleClick}>ABS</MenuItem>
+              {excercises.map((value) => (
+                <MenuItem dense onClick={handleClick}>
+                  {value}
+                </MenuItem>
+              ))}
             </Menu>
           </Box>
           <FitnessCenterIcon
