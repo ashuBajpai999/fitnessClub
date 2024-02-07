@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/fitnessClub/static/css/main.488fd116.css",
-    "main.js": "/fitnessClub/static/js/main.d137ae6f.js",
+    "main.js": "/fitnessClub/static/js/main.6d8b57f8.js",
     "static/media/plank.mp4": "/fitnessClub/static/media/plank.c1b7fb504c7b85c59874.mp4",
     "static/media/reverse_chinups.mp4": "/fitnessClub/static/media/reverse_chinups.e9492f5baf4daf846b11.mp4",
     "static/media/Butterfly.webm": "/fitnessClub/static/media/Butterfly.a0fc07db17c339abdd68.webm",
@@ -49,6 +49,7 @@
     "static/media/back_1.mp4": "/fitnessClub/static/media/back_1.fb45a286752cb1db3675.mp4",
     "static/media/ABS_15.mp4": "/fitnessClub/static/media/ABS_15.e96d5921a1f83e4021ba.mp4",
     "static/media/ABS_12.mp4": "/fitnessClub/static/media/ABS_12.f28db239b52864d2671e.mp4",
+    "static/media/leg_12.mp4": "/fitnessClub/static/media/leg_12.adeb3f46bd749ce0d96c.mp4",
     "static/media/Chest_19.mp4": "/fitnessClub/static/media/Chest_19.d047dd288ce2eede9485.mp4",
     "static/media/ABS_11.mp4": "/fitnessClub/static/media/ABS_11.405d3a71a3ffed541d2e.mp4",
     "static/media/Chest_15.mp4": "/fitnessClub/static/media/Chest_15.94c7cd97365c7ff0747c.mp4",
@@ -118,10 +119,10 @@
     "static/media/skippingRope.webp": "/fitnessClub/static/media/skippingRope.33ac4ec75424de5d7c12.webp",
     "index.html": "/fitnessClub/index.html",
     "main.488fd116.css.map": "/fitnessClub/static/css/main.488fd116.css.map",
-    "main.d137ae6f.js.map": "/fitnessClub/static/js/main.d137ae6f.js.map"
+    "main.6d8b57f8.js.map": "/fitnessClub/static/js/main.6d8b57f8.js.map"
   },
   "entrypoints": [
     "static/css/main.488fd116.css",
-    "static/js/main.d137ae6f.js"
+    "static/js/main.6d8b57f8.js"
   ]
 }
