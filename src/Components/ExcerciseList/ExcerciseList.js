@@ -742,34 +742,33 @@ Focus on using the triceps to extend the arms. Aim for a specific number of repe
     title: `The Dumbbell Standing Triceps Extension is an effective exercise for targeting the triceps......`,
   },
   {
-    name: "Cable Rope High Pulley Overhead Triceps Extension Upper Arms exercise",
+    name: "Cable Rope High Pulley Overhead",
     index: 4,
     id: "tricep_5",
     path: Tricep5,
-    description: `The Dumbbell Standing Triceps Extension is an effective exercise for targeting the triceps, helping to build strength and definition in the back of the arms. To do this excercise Stand with your feet shoulder-width apart.
-Hold a dumbbell in one or both hands with an overhand grip (palms facing down).
-If using one dumbbell, grasp it with both hands, ensuring a firm grip. Inhale and, with a controlled motion, bend your elbows to lower the dumbbell(s) behind your head.
-Allow your elbows to flex, bringing the dumbbell(s) down until your forearms are parallel to the floor or slightly beyond. Ensure that your upper arms remain close to your head and stationary throughout the movement.
-Feel a stretch in your triceps as you lower the weight. Inhale as you lower the dumbbell(s) behind your head.
-Exhale as you extend your arms and push the weight back up. Keep the movement controlled, avoiding any sudden or jerky motions.
-Focus on using the triceps to extend the arms. Aim for a specific number of repetitions based on your training plan. This exercise specifically targets the triceps, contributing to strength and muscle development. You can perform this exercise with one or two dumbbells, providing flexibility in your workout routine. You can perform the exercise with one arm at a time (unilateral) or both arms simultaneously (bilateral). Choose a weight that allows you to complete the desired number of repetitions with proper form. If you have any specific concerns or medical conditions, it's advisable to consult with a fitness professional or healthcare provider before attempting new exercises.`,
+    description: `The Cable Rope High Pulley Overhead Triceps Extension is an effective exercise that targets the triceps, helping to strengthen and tone the muscles on the back of the upper arms. The settup is Attach a rope handle to the high pulley of a cable machine.
+Adjust the weight on the machine to an appropriate level for your fitness and the position is Stand facing the cable machine with your feet shoulder-width apart.
+Grab the rope with a neutral grip (palms facing each other) and hold it with both hands and the execution is Start with your hands close to your forehead and your elbows bent.
+Exhale and, keeping your upper arms stationary, extend your forearms downward by straightening your elbows.
+Focus on contracting your triceps at the bottom of the movement and the range of motion is Lower the rope back behind your head in a controlled manner, feeling a stretch in your triceps. The breathing process is Inhale as you lower the rope.
+Exhale as you extend your arms and push the rope downward. Keep the movement controlled throughout, avoiding any jerking or sudden motions.
+Ensure that your upper arms remain still during the exercise. Aim for a specific number of repetitions based on your training plan. This exercise effectively isolates and targets the triceps, contributing to strength and muscle development. Using the rope attachment allows for a comfortable grip and may provide a different feel compared to other triceps exercises. The cable machine's adjustable weight stack allows you to easily adjust the resistance based on your strength level. As always, start with a weight that allows you to maintain proper form, and gradually increase the weight as your strength improves. If you have any specific concerns or medical conditions, it's advisable to consult with a fitness professional or healthcare provider before attempting new exercises.`,
     href: `Excercise?index=${4}`,
-    title: `The Dumbbell Standing Triceps Extension is an effective exercise for targeting the triceps......`,
+    title: `The Cable Rope High Pulley Overhead Triceps Extension is an effective exercise that targets......`,
   },
   {
-    name: "Dumbbell Lying Single Extension Upper Arms exercise",
+    name: "Dumbbell Lying / Skull Crusher Extension",
     index: 5,
     id: "tricep_6",
     path: Tricep6,
-    description: `The Dumbbell Standing Triceps Extension is an effective exercise for targeting the triceps, helping to build strength and definition in the back of the arms. To do this excercise Stand with your feet shoulder-width apart.
-Hold a dumbbell in one or both hands with an overhand grip (palms facing down).
-If using one dumbbell, grasp it with both hands, ensuring a firm grip. Inhale and, with a controlled motion, bend your elbows to lower the dumbbell(s) behind your head.
-Allow your elbows to flex, bringing the dumbbell(s) down until your forearms are parallel to the floor or slightly beyond. Ensure that your upper arms remain close to your head and stationary throughout the movement.
-Feel a stretch in your triceps as you lower the weight. Inhale as you lower the dumbbell(s) behind your head.
-Exhale as you extend your arms and push the weight back up. Keep the movement controlled, avoiding any sudden or jerky motions.
-Focus on using the triceps to extend the arms. Aim for a specific number of repetitions based on your training plan. This exercise specifically targets the triceps, contributing to strength and muscle development. You can perform this exercise with one or two dumbbells, providing flexibility in your workout routine. You can perform the exercise with one arm at a time (unilateral) or both arms simultaneously (bilateral). Choose a weight that allows you to complete the desired number of repetitions with proper form. If you have any specific concerns or medical conditions, it's advisable to consult with a fitness professional or healthcare provider before attempting new exercises.`,
+    description: `Certainly! The Dumbbell Lying Triceps Extension, also known as the Dumbbell Skull Crusher, is an effective exercise for targeting the triceps. The settup of this excercise is Lie down on a flat bench with your back flat against the bench.
+Hold a single dumbbell with both hands using an overhand grip (palms facing up).
+Extend your arms straight up toward the ceiling, positioning the dumbbell directly above your chest and the position is Ensure that your upper arms are perpendicular to the floor, and your elbows are fully extended and the execution is Inhale and, while keeping your upper arms stationary, bend your elbows to lower the dumbbell toward your forehead.
+Focus on flexing your elbows, allowing the dumbbell to move in a controlled manner. The range of motion is Lower the dumbbell until your forearms are parallel to the floor or slightly below, feeling a stretch in your triceps and the breathing process is Inhale as you lower the dumbbell.
+Exhale as you extend your arms and push the dumbbell back up. Keep the movement controlled throughout, avoiding any sudden or jerky motions.
+Ensure that your upper arms remain stationary throughout the exercise. Aim for a specific number of repetitions based on your training plan. This exercise targets the triceps, contributing to strength and muscle development. You can easily adjust the resistance by using different dumbbell weights. Performing the exercise on a flat bench provides stability and helps isolate the triceps effectively. As always, start with a weight that allows you to maintain proper form, and gradually increase the weight as your strength improves. If you have any specific concerns or medical conditions, it's advisable to consult with a fitness professional or healthcare provider before attempting new exercises.`,
     href: `Excercise?index=${5}`,
-    title: `The Dumbbell Standing Triceps Extension is an effective exercise for targeting the triceps......`,
+    title: `The Dumbbell Lying Triceps Extension, also known as the Dumbbell Skull Crusher, is an effective......`,
   },
   {
     name: "EZ-Barbell Decline Triceps Extension exercise",
@@ -814,32 +813,35 @@ Exhale as you curl the barbell upward. Avoid using momentum or swinging the body
     title: `The preacher curl is an isolation exercise that targets the biceps, emphasizing the brachialis......`,
   },
   {
-    name: "Leverage machine preacher curl plate loaded",
+    name: "Leverage machine preacher curl",
     index: 2,
     id: "bicep_3",
     path: Bicep2,
-    description: `The preacher curl is an isolation exercise that targets the biceps, emphasizing the brachialis muscle. It's performed using a preacher bench, which provides support for the arms, isolating the biceps and reducing the involvement of other muscles. To do this excercise Adjust the preacher bench so that the pad is positioned at the appropriate height. The upper arms should rest comfortably on the pad, and your chest should be against the inclined surface.
-Place a barbell or an EZ curl bar on the stand attached to the preacher bench. Grasp the barbell with an underhand (palms facing up) grip, hands positioned slightly narrower than shoulder-width apart. Alternatively, you can use an EZ curl bar, which has a curved design for a more wrist-friendly grip. Sit on the preacher bench with your chest against the pad and your upper arms resting on the inclined surface.
-Extend your arms fully, allowing the barbell to hang down in front of you. With a slow and controlled motion, curl the barbell upward towards your shoulders by flexing your elbows.
-Squeeze your biceps at the top of the movement, ensuring a full contraction.
-Lower the barbell back down in a controlled manner, fully extending your arms. Inhale as you lower the barbell.
-Exhale as you curl the barbell upward. Avoid using momentum or swinging the body. Keep the movement controlled to target the biceps effectively. Aim for a specific number of repetitions based on your training plan. The preacher curl isolates the biceps, specifically targeting the brachialis muscle. The preacher bench helps prevent swinging or using body momentum, ensuring strict form and better isolation of the biceps.  It's an effective exercise for building strength and muscle mass in the biceps. As with any exercise, start with a weight that allows you to maintain proper form. Gradually increase the weight as your strength improves. If you're new to weightlifting or have any concerns, it's advisable to seek guidance from a fitness professional to ensure proper technique and minimize the risk of injury.`,
+    description: `The Leverage Machine Preacher Curl is an exercise that targets the biceps, specifically emphasizing the brachialis muscle. Using a plate-loaded leverage machine provides a stable platform for isolating the biceps and reducing the involvement of other muscle groups. The settup of this excercise is Adjust the lever arms of the plate-loaded leverage machine to an appropriate height.
+Load weight plates onto the machine according to your strength level and the positioning is Sit on the preacher bench or the designated seat of the machine.
+Adjust the seat height so that the upper arms rest comfortably on the preacher pad, allowing your chest to be firmly against it and the griping is Grasp the handles or bar attached to the lever arms with an underhand grip (palms facing up).
+Your hands should be positioned slightly wider than shoulder-width apart. The execution of this excercise is Allow your arms to fully extend, bringing the lever arms down toward the floor.
+Exhale and curl the lever arms upward by flexing your elbows, contracting your biceps.
+Continue lifting until your forearms are nearly vertical and you feel a full contraction in your biceps. The range motion is Lower the lever arms back down in a controlled manner, fully extending your arms and feeling a stretch in your biceps. The breathing process is Inhale as you lower the lever arms.
+Exhale as you curl the lever arms upward. Keep the movement controlled throughout the exercise, avoiding any swinging or jerking motions.
+Ensure that your upper arms remain firmly on the preacher pad throughout the set. Aim for a specific number of repetitions based on your training plan. The preacher curl on a leverage machine isolates the biceps, focusing on the brachialis muscle. The machine provides stability, minimizing the use of body momentum and ensuring strict form.  It's effective for building strength and muscle mass in the biceps. As always, start with a weight that allows you to maintain proper form, and gradually increase the weight as your strength improves. If you have any specific concerns or medical conditions, it's advisable to consult with a fitness professional or healthcare provider before attempting new exercises.`,
     href: `Excercise?index=${2}`,
-    title: `The preacher curl is an isolation exercise that targets the biceps, emphasizing the brachialis......`,
+    title: `The Leverage Machine Preacher Curl is an exercise that targets the biceps, specifically......`,
   },
   {
-    name: "Barbell Standing Wide Grip Biceps Curl exercise",
+    name: "Barbell Standing Wide Grip",
     index: 3,
     id: "bicep_4",
     path: Bicep3,
-    description: `The preacher curl is an isolation exercise that targets the biceps, emphasizing the brachialis muscle. It's performed using a preacher bench, which provides support for the arms, isolating the biceps and reducing the involvement of other muscles. To do this excercise Adjust the preacher bench so that the pad is positioned at the appropriate height. The upper arms should rest comfortably on the pad, and your chest should be against the inclined surface.
-Place a barbell or an EZ curl bar on the stand attached to the preacher bench. Grasp the barbell with an underhand (palms facing up) grip, hands positioned slightly narrower than shoulder-width apart. Alternatively, you can use an EZ curl bar, which has a curved design for a more wrist-friendly grip. Sit on the preacher bench with your chest against the pad and your upper arms resting on the inclined surface.
-Extend your arms fully, allowing the barbell to hang down in front of you. With a slow and controlled motion, curl the barbell upward towards your shoulders by flexing your elbows.
-Squeeze your biceps at the top of the movement, ensuring a full contraction.
-Lower the barbell back down in a controlled manner, fully extending your arms. Inhale as you lower the barbell.
-Exhale as you curl the barbell upward. Avoid using momentum or swinging the body. Keep the movement controlled to target the biceps effectively. Aim for a specific number of repetitions based on your training plan. The preacher curl isolates the biceps, specifically targeting the brachialis muscle. The preacher bench helps prevent swinging or using body momentum, ensuring strict form and better isolation of the biceps.  It's an effective exercise for building strength and muscle mass in the biceps. As with any exercise, start with a weight that allows you to maintain proper form. Gradually increase the weight as your strength improves. If you're new to weightlifting or have any concerns, it's advisable to seek guidance from a fitness professional to ensure proper technique and minimize the risk of injury.`,
+    description: `The Barbell Standing Wide Grip Biceps Curl is a variation of the traditional barbell biceps curl. This exercise emphasizes the outer part of the biceps and engages the brachialis to a greater extent. The settup of this excercise is Stand with your feet shoulder-width apart.
+Hold a barbell with a wide overhand grip (palms facing forward). Your hands should be positioned significantly wider than shoulder-width apart and the position of this excercise is Allow the barbell to hang at arm's length in front of your thighs.
+Ensure that your back is straight, chest is up, and shoulders are pulled back and the execution is Exhale and, keeping your upper arms stationary, curl the barbell upward by flexing your elbows.
+Continue the curl until the barbell is close to shoulder level or until you feel a full contraction in your biceps.
+Squeeze your biceps at the top of the movement. The range of motion is Lower the barbell back down to the starting position in a controlled manner, fully extending your arms. The breathing process is Inhale as you lower the barbell.
+Exhale as you curl the barbell upward. Keep the movement controlled throughout the exercise, avoiding any swinging or using momentum.
+Focus on isolating the biceps and minimizing involvement of other muscle groups. Aim for a specific number of repetitions based on your training plan. The wide grip places additional emphasis on the outer part of the biceps. This exercise engages the brachialis muscle, contributing to overall arm development. Changing the grip width alters the muscle engagement, providing variety in your biceps workout. As with any exercise, start with a weight that allows you to maintain proper form. Gradually increase the weight as your strength improves. If you have any specific concerns or medical conditions, it's advisable to consult with a fitness professional or healthcare provider before attempting new exercises.`,
     href: `Excercise?index=${3}`,
-    title: `The preacher curl is an isolation exercise that targets the biceps, emphasizing the brachialis......`,
+    title: `The Barbell Standing Wide Grip Biceps Curl is a variation of the traditional barbell biceps curl......`,
   },
   {
     name: "Dumbbell peacher hammer curl",
@@ -884,18 +886,19 @@ Exhale as you curl the barbell upward. Avoid using momentum or swinging the body
     title: `The preacher curl is an isolation exercise that targets the biceps, emphasizing the brachialis......`,
   },
   {
-    name: "EZ-Bar Seated Close Grip Concentration Curl exercise",
+    name: "EZ-Bar Seated Close Grip Concentration",
     index: 7,
     id: "bicep_8",
     path: Bicep7,
-    description: `The preacher curl is an isolation exercise that targets the biceps, emphasizing the brachialis muscle. It's performed using a preacher bench, which provides support for the arms, isolating the biceps and reducing the involvement of other muscles. To do this excercise Adjust the preacher bench so that the pad is positioned at the appropriate height. The upper arms should rest comfortably on the pad, and your chest should be against the inclined surface.
-Place a barbell or an EZ curl bar on the stand attached to the preacher bench. Grasp the barbell with an underhand (palms facing up) grip, hands positioned slightly narrower than shoulder-width apart. Alternatively, you can use an EZ curl bar, which has a curved design for a more wrist-friendly grip. Sit on the preacher bench with your chest against the pad and your upper arms resting on the inclined surface.
-Extend your arms fully, allowing the barbell to hang down in front of you. With a slow and controlled motion, curl the barbell upward towards your shoulders by flexing your elbows.
-Squeeze your biceps at the top of the movement, ensuring a full contraction.
-Lower the barbell back down in a controlled manner, fully extending your arms. Inhale as you lower the barbell.
-Exhale as you curl the barbell upward. Avoid using momentum or swinging the body. Keep the movement controlled to target the biceps effectively. Aim for a specific number of repetitions based on your training plan. The preacher curl isolates the biceps, specifically targeting the brachialis muscle. The preacher bench helps prevent swinging or using body momentum, ensuring strict form and better isolation of the biceps.  It's an effective exercise for building strength and muscle mass in the biceps. As with any exercise, start with a weight that allows you to maintain proper form. Gradually increase the weight as your strength improves. If you're new to weightlifting or have any concerns, it's advisable to seek guidance from a fitness professional to ensure proper technique and minimize the risk of injury.`,
+    description: `The EZ-Bar Seated Close Grip Concentration Curl is a variation of the traditional concentration curl that targets the biceps, specifically emphasizing the inner part of the biceps. The use of an EZ-bar and a close grip places additional emphasis on the brachialis muscle. The settup of this excercise is Sit on a bench with your back straight, chest up, and feet flat on the floor.
+Hold an EZ-bar with a close grip (hands positioned closer than shoulder-width apart) and palms facing up and position of this excercise is Rest your upper arms against the inside of your thighs, allowing your elbows to extend below the knees.
+Ensure that your back remains straight throughout the movement. The execution is Exhale and, keeping your upper arms stationary, curl the EZ-bar upward by flexing your elbows.
+Focus on squeezing your biceps and brachialis at the top of the movement.
+Keep your wrists in a comfortable and neutral position and the range of motion is Lower the EZ-bar back down to the starting position in a controlled manner, fully extending your arms. The breathing process is Inhale as you lower the EZ-bar.
+Exhale as you curl the EZ-bar upward. Maintain control throughout the exercise, avoiding any swinging or using momentum.
+Ensure that your upper arms remain pressed against the inside of your thighs. Aim for a specific number of repetitions based on your training plan. The close grip and concentration curl position emphasize the inner part of the biceps. This exercise engages the brachialis muscle, contributing to overall arm development. The concentration curl position isolates the biceps, reducing involvement of other muscle groups. As always, start with a weight that allows you to maintain proper form. Gradually increase the weight as your strength improves. If you have any specific concerns or medical conditions, it's advisable to consult with a fitness professional or healthcare provider before attempting new exercises.`,
     href: `Excercise?index=${7}`,
-    title: `The preacher curl is an isolation exercise that targets the biceps, emphasizing the brachialis......`,
+    title: `The EZ-Bar Seated Close Grip Concentration Curl is a variation of the traditional......`,
   },
   {
     name: "Ez-barbell reverse grip curl",
