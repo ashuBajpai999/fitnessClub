@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/fitnessClub/static/css/main.488fd116.css",
-    "main.js": "/fitnessClub/static/js/main.82636677.js",
+    "main.css": "/fitnessClub/static/css/main.aeed47be.css",
+    "main.js": "/fitnessClub/static/js/main.9a8afdac.js",
     "static/media/plank.mp4": "/fitnessClub/static/media/plank.c1b7fb504c7b85c59874.mp4",
     "static/media/reverse_chinups.mp4": "/fitnessClub/static/media/reverse_chinups.e9492f5baf4daf846b11.mp4",
     "static/media/Butterfly.webm": "/fitnessClub/static/media/Butterfly.a0fc07db17c339abdd68.webm",
@@ -118,11 +118,11 @@
     "static/media/gloves.webp": "/fitnessClub/static/media/gloves.9d49358d1ee4c2af7c7d.webp",
     "static/media/skippingRope.webp": "/fitnessClub/static/media/skippingRope.33ac4ec75424de5d7c12.webp",
     "index.html": "/fitnessClub/index.html",
-    "main.488fd116.css.map": "/fitnessClub/static/css/main.488fd116.css.map",
-    "main.82636677.js.map": "/fitnessClub/static/js/main.82636677.js.map"
+    "main.aeed47be.css.map": "/fitnessClub/static/css/main.aeed47be.css.map",
+    "main.9a8afdac.js.map": "/fitnessClub/static/js/main.9a8afdac.js.map"
   },
   "entrypoints": [
-    "static/css/main.488fd116.css",
-    "static/js/main.82636677.js"
+    "static/css/main.aeed47be.css",
+    "static/js/main.9a8afdac.js"
   ]
 }
