@@ -16,7 +16,11 @@ import Typography from "@mui/material/Typography";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
-const pages = ["HOME", "PRODUCTS", "EXCERCISES", "SIGNUP", "SIGNIN"];
+import { signOut } from "firebase/auth";
+import { auth } from "../Components/Database/Firebase";
+import { setSnackbar } from "../Store/Reducers/Snackbar";
+import { useDispatch } from "react-redux";
+let pages = ["HOME", "PRODUCTS", "EXCERCISES", "SIGNUP", "SIGNIN"];
 const excercises = [
   "Leg",
   "Biceps",
@@ -26,9 +30,15 @@ const excercises = [
   "Chest",
   "ABS",
 ];
-const settings = ["Profile"];
+let settings = ["SignUp", "SignIn"];
 
 const Header = (props) => {
+  const storedUserData = sessionStorage.getItem("userData");
+  const data = JSON.parse(storedUserData);
+  if (storedUserData) {
+    pages = ["HOME", "PRODUCTS", "EXCERCISES", "SIGNOUT"];
+    settings = ["Profile", "SignOut"];
+  }
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -72,6 +82,7 @@ const Header = (props) => {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const Search = styled("div")(({ theme }) => ({
     position: "relative",
     borderRadius: theme.shape.borderRadius,
@@ -86,6 +97,17 @@ const Header = (props) => {
       width: "auto",
     },
   }));
+
+  const signOutUser = async () => {
+    try {
+      await signOut(auth);
+      sessionStorage.removeItem("userData");
+      pages = ["HOME", "PRODUCTS", "EXCERCISES", "SIGNUP", "SIGNIN"];
+      navigate("/");
+    } catch (error) {
+      dispatch(setSnackbar(true, "error", { error }));
+    }
+  };
 
   const SearchIconWrapper = styled("div")(({ theme }) => ({
     padding: theme.spacing(0, 2),
@@ -137,6 +159,9 @@ const Header = (props) => {
       case "SIGNIN":
         navigate("SignIn");
         break;
+      case "SIGNOUT":
+        signOutUser();
+        break;
       default:
         break;
     }
@@ -150,8 +175,15 @@ const Header = (props) => {
           state: { ...props },
         });
         break;
-      // return <Profile img={img} />;
-
+      case "SignUp":
+        navigate("SignUp");
+        break;
+      case "SignIn":
+        navigate("SignIn");
+        break;
+      case "SignOut":
+        signOutUser();
+        break;
       default:
         break;
     }
@@ -308,7 +340,7 @@ const Header = (props) => {
                 <Avatar
                   alt="Remy Sharp"
                   // sx={{ backgroundImage: `url(${Banner})` }}
-                  // srcSet={}
+                  srcSet={data ? data.image : ""}
                 />
               </IconButton>
             </Tooltip>

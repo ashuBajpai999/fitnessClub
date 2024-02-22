@@ -13,3 +13,17 @@ export const signupSchema = Yup.object({
     .required("Please fill this as same as password")
     .oneOf([Yup.ref("password"), null], "Password does not matched"),
 });
+
+export const profileSchema = Yup.object({
+  name: Yup.string().min(1).max(20).required("Please Enter Your Name"),
+  mobile: Yup.number()
+    .min(1000000000)
+    .max(9999999999)
+    .required("Please Enter Your Mobile Number"),
+  dob: Yup.date().required("Age is a required feild"),
+});
+
+export const signInSchema = Yup.object({
+  email: Yup.string().email().required("Please Enter Your Email"),
+  password: Yup.string().required("Please Enter Your Password"),
+});

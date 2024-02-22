@@ -273,6 +273,12 @@ span {
   transform: translateX(0px) translateY(30px);
 }
 
+.signInInputBox .error {
+  color: #45f3ff;
+  font-size: 0.75em;
+  transform: translateX(0px) translateY(30px);
+}
+
 .inputBox i {
   position: absolute;
   left: 0;
@@ -622,13 +628,13 @@ span {
 .signInInputBox {
   position: relative;
   width: 300px;
-  margin-top: 35px;
+  margin-top: 350px;
 }
 
 .signInInputBox input {
   position: relative;
   width: 100%;
-  padding: 20px 10px;
+  padding: 30px 10px 10px;
   background: transparent;
   border: none;
   outline: none;
@@ -650,10 +656,10 @@ span {
   transition: 0.05s;
 }
 
-.signInInputBox input:valid ~ span,
-.signInInputBox input:focus ~ span {
+.signInInputBox input:valid ~ .label,
+.signInInputBox input:focus ~ .label {
   color: #45f3ff;
-  transform: translateX(0px) translateY(-34px);
+  transform: translateX(14rem) translateY(-34px);
   font-size: 0.75em;
 }
 
@@ -695,13 +701,17 @@ span {
 input[type="submit"] {
   border: none;
   outline: none;
-  background: #45f3ff;
+  background: rgb(143, 143, 143);
   padding: 11px 25px;
   width: 200px;
   margin-top: 0px;
   border-radius: 4px;
   font-weight: 600;
   cursor: pointer;
+}
+
+input[type="submit"]:focus {
+  background: #45f3ff;
 }
 
 input[type="submit"]:active {

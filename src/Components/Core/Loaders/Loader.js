@@ -1,18 +1,16 @@
-import { Grid } from "@mui/material";
+import { Backdrop, Grid } from "@mui/material";
 import CircularProgress from "@mui/material/CircularProgress";
 import React from "react";
 
-const Loader = () => {
+const Loader = (props) => {
   return (
-    <Grid
-      container
-      justifyContent="center"
-      alignItems="center"
-      sx={{ marginTop: "20%" }}
-    >
-      <Grid item>
+    <Grid item md={12} xs={12} sm={12}>
+      <Backdrop
+        open={props}
+        sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
+      >
         <CircularProgress />
-      </Grid>
+      </Backdrop>
     </Grid>
   );
 };

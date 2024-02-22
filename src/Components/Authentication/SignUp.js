@@ -1,5 +1,5 @@
 import { Avatar, Grid, Link } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../../App.css";
 import { useDispatch } from "react-redux";
 import { setSnackbar } from "../../Store/Reducers/Snackbar";
@@ -7,9 +7,13 @@ import { useNavigate } from "react-router-dom";
 import { signupSchema } from "./ValidationSchema";
 import { useFormik } from "formik";
 import HandleEnter from "../../Utils/FormNavigation";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { auth } from "../Database/Firebase";
+import Loader from "../Core/Loaders/Loader";
 
 const SignUp = () => {
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -40,33 +44,47 @@ const SignUp = () => {
     name = e.target.name;
     setUser({ ...user, [name]: url });
   };
+
+  useEffect(() => {
+    document.getElementById("userName").focus();
+  }, []);
+
   const postData = async (e) => {
-    // e.preventDefault();
     const { name, email, mobile, dob, password, cnfPassword, image } = user;
     if (name && email && mobile && dob && password && cnfPassword && image) {
-      const response = await fetch(
-        "https://fitnessclub-386ac-default-rtdb.firebaseio.com/fitnessClubDatabase.json",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            name,
-            email,
-            mobile,
-            dob,
-            password,
-            cnfPassword,
-            image,
-          }),
+      try {
+        setIsLoading(true);
+        const userCredential = await createUserWithEmailAndPassword(
+          auth,
+          email,
+          password
+        );
+        await updateProfile(userCredential.user, { displayName: name });
+        const response = await fetch(
+          `https://fitnessclub-386ac-default-rtdb.firebaseio.com/fitnessClubDatabase/${userCredential.user.uid}.json`,
+          {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              name,
+              email,
+              mobile,
+              dob,
+              password,
+              image,
+            }),
+          }
+        );
+        if (response) {
+          setIsLoading(false);
+          navigate("/SignIn");
+          dispatch(setSnackbar(true, "success", "Registration Successfully"));
         }
-      );
-      if (response) {
-        navigate("/UserProfile", {
-          state: { ...user },
-        });
-        dispatch(setSnackbar(true, "success", "Registration Successfully"));
+      } catch (error) {
+        setIsLoading(false);
+        dispatch(setSnackbar(true, "error", error.message));
       }
     } else {
       dispatch(setSnackbar(true, "error", "Please fill all details"));
@@ -92,6 +110,7 @@ const SignUp = () => {
       className="signUpContainer"
       sx={{ pt: { md: 0, xs: 13 }, pb: { md: 0, xs: 7 } }}
     >
+      {isLoading && <Loader props={isLoading} />}
       <Grid item md={10} xs={11}>
         <Grid container className="box">
           <Grid item md={12} xs={12}>
@@ -101,6 +120,7 @@ const SignUp = () => {
               method="POST"
               container
               class="form"
+              onSubmit={handleParameter}
               direction="row"
             >
               <Grid item md={12} xs={12} sx={{ marginTop: -6 }}>
@@ -109,15 +129,23 @@ const SignUp = () => {
               <Grid container>
                 <Grid item md={9} xs={12}>
                   <Grid container columnGap={2}>
-                    <Grid item md={5} xs={12} sm={5} className="inputBox">
+                    <Grid
+                      item
+                      md={5}
+                      xs={12}
+                      sm={5}
+                      marginTop={2}
+                      className="inputBox"
+                    >
                       <input
+                        id="userName"
                         onKeyDown={handleEnter}
                         onChange={setValueOfUser}
                         value={user.name}
                         name="name"
                         autocomplete="off"
                         type="text"
-                        required="required"
+                        required
                       />
                       <span className="label">Username</span>
                       <i></i>
@@ -137,7 +165,7 @@ const SignUp = () => {
                         name="email"
                         autocomplete="off"
                         type="text"
-                        required="required"
+                        required
                       />
                       <span className="label">Email</span>
                       <i></i>
@@ -156,8 +184,8 @@ const SignUp = () => {
                         value={user.mobile}
                         name="mobile"
                         autocomplete="off"
-                        type="text"
-                        required="required"
+                        type="tel"
+                        required
                       />
                       <span className="label">Mobile No.</span>
                       <i></i>
@@ -176,7 +204,7 @@ const SignUp = () => {
                         value={user.dob}
                         name="dob"
                         type="date"
-                        required="required"
+                        required
                       />
                       <span className="label">Date of Birth</span>
                       <i></i>
@@ -195,7 +223,7 @@ const SignUp = () => {
                         value={user.password}
                         name="password"
                         type="password"
-                        required="required"
+                        required
                       />
                       <span className="label">Password</span>
                       <i></i>
@@ -214,7 +242,7 @@ const SignUp = () => {
                         value={user.cnfPassword}
                         name="cnfPassword"
                         type="password"
-                        required="required"
+                        required
                       />
                       <span className="label">Confirm Password</span>
                       <i></i>
@@ -287,7 +315,7 @@ const SignUp = () => {
                   class="signUpButton"
                   type="submit"
                   value="Signup"
-                  onClick={handleParameter}
+                  onKeyDown={handleEnter}
                 />
               </Grid>
             </Grid>
