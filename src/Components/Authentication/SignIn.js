@@ -79,16 +79,20 @@ const SignIn = () => {
     HandleEnter(e);
   };
 
+  const handleNavigationClick = () => {
+    navigate("/SignUp");
+  };
+
   return (
     <Grid container className="signInContainer">
       {isLoading && <Loader />}
       <Grid item md={3}>
-        <Grid container class="signInBox">
+        <Grid container className="signInBox">
           <Grid item md={12}>
             <Grid
               container
               component="form"
-              class="signInForm"
+              className="signInForm"
               method="POST"
               onSubmit={handleParameter}
             >
@@ -127,12 +131,17 @@ const SignIn = () => {
                 <Link underline="none" color="#8f8f8f" fontSize="0.75em">
                   Forgot Password
                 </Link>
-                <Link underline="none" fontSize="0.75em" href="SignUp">
+                <Link underline="none" onClick={handleNavigationClick}>
                   SignUp
                 </Link>
               </Grid>
               <Grid item md={12}>
-                <input type="submit" value="Login" />
+                <input
+                  id="signInButton"
+                  type="submit"
+                  value="Login"
+                  onKeyDown={handleEnter}
+                />
               </Grid>
             </Grid>
           </Grid>

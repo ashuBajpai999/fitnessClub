@@ -104,6 +104,10 @@ const SignUp = () => {
     HandleEnter(e);
   };
 
+  const handleNavigationClick = () => {
+    navigate("/SignIn");
+  };
+
   return (
     <Grid
       container
@@ -119,7 +123,7 @@ const SignUp = () => {
               id="signUpForm"
               method="POST"
               container
-              class="form"
+              className="form"
               onSubmit={handleParameter}
               direction="row"
             >
@@ -255,10 +259,7 @@ const SignUp = () => {
                       className="links"
                       sx={{ display: { xs: "none", sm: "none", md: "flex" } }}
                     >
-                      <Link underline="none" color="#8f8f8f" fontSize="0.75em">
-                        Forgot Password
-                      </Link>
-                      <Link underline="none" fontSize="0.75em" href="SignIn">
+                      <Link underline="none" onClick={handleNavigationClick}>
                         SignIn
                       </Link>
                     </Grid>
@@ -299,10 +300,7 @@ const SignUp = () => {
                       className="links"
                       sx={{ display: { xs: "flex", sm: "flex", md: "none" } }}
                     >
-                      <Link underline="none" color="#8f8f8f" fontSize="0.75em">
-                        Forgot Password
-                      </Link>
-                      <Link underline="none" fontSize="0.75em" href="SignIn">
+                      <Link underline="none" onClick={handleNavigationClick}>
                         SignIn
                       </Link>
                     </Grid>
@@ -312,7 +310,7 @@ const SignUp = () => {
               <Grid item md={12} xs={12}>
                 <input
                   id="signUpButton"
-                  class="signUpButton"
+                  className="signUpButton"
                   type="submit"
                   value="Signup"
                   onKeyDown={handleEnter}

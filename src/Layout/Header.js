@@ -103,6 +103,7 @@ const Header = (props) => {
       await signOut(auth);
       sessionStorage.removeItem("userData");
       pages = ["HOME", "PRODUCTS", "EXCERCISES", "SIGNUP", "SIGNIN"];
+      settings = ["SignUp", "SignIn"];
       navigate("/");
     } catch (error) {
       dispatch(setSnackbar(true, "error", { error }));
@@ -151,7 +152,14 @@ const Header = (props) => {
         navigate("AllProducts");
         break;
       case "EXCERCISES":
-        setAnchorEl(event.currentTarget);
+        if (storedUserData) {
+          setAnchorEl(event.currentTarget);
+        } else {
+          dispatch(
+            setSnackbar(true, "info", "You are not Logged In. First LogIn!!!")
+          );
+          navigate("/SignIn");
+        }
         break;
       case "SIGNUP":
         navigate("SignUp");
@@ -270,7 +278,7 @@ const Header = (props) => {
               }}
             >
               {excercises.map((value) => (
-                <MenuItem dense onClick={handleClick}>
+                <MenuItem dense onClick={handleClick} key={value}>
                   {value}
                 </MenuItem>
               ))}

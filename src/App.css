@@ -254,7 +254,8 @@ span {
   bottom: 0px;
   padding: 0px 10px 10px 0px;
   font-size: 1em;
-  color: #8f8f8f;
+  /* color: #8f8f8f; */
+  color: bisque;
   pointer-events: none;
   letter-spacing: 0.05em;
   transition: 0.05s;
@@ -303,9 +304,11 @@ span {
   padding-top: 22px;
 }
 
-.links a:hover,
-.links a:nth-child(2) {
+.links a:nth-child(1) {
   color: #45f3ff;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .myImage {
@@ -445,7 +448,7 @@ span {
     bottom: 0px;
     padding: 0px 10px 10px 0px;
     font-size: 1em;
-    color: #8f8f8f;
+    color: bisque;
     pointer-events: none;
     letter-spacing: 0.05em;
     transition: 0.05s;
@@ -650,7 +653,7 @@ span {
   top: 0;
   padding: 30px 10px;
   font-size: 1em;
-  color: #8f8f8f;
+  color: bisque;
   pointer-events: none;
   letter-spacing: 0.05em;
   transition: 0.05s;
@@ -689,8 +692,10 @@ span {
 .signInLinks a {
   margin: 10px 0;
   font-size: 0.75em;
-  color: #8f8f8f;
+  /* color: #8f8f8f; */
+  color: #45f3ff;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .signInLinks a:hover,

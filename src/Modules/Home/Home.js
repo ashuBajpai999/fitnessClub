@@ -6,16 +6,27 @@ import VideoCardDemo from "../../Components/Core/Card/VideoCardDemo";
 import Carousel from "../../Components/Core/Carousel/Carousel";
 import Product from "../../images/AboutImg.webp";
 import AboutUs from "../About/AboutUs";
+import { setSnackbar } from "../../Store/Reducers/Snackbar";
+import { useDispatch } from "react-redux";
 
 const Home = () => {
+  const storedUserData = sessionStorage.getItem("userData");
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const openPage = (e) => {
     switch (e.target.id) {
       case "Products":
         navigate("/AllProducts");
         break;
       case "Excercises":
-        navigate("/Excercises?E=Back");
+        if (storedUserData) {
+          navigate("/Excercises?E=Back");
+        } else {
+          dispatch(
+            setSnackbar(true, "info", "You are not Logged In. First LogIn!!!")
+          );
+          navigate("/SignIn");
+        }
         break;
       default:
         break;

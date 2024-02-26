@@ -22,7 +22,11 @@ const HandleEnter = (e) => {
   } else if (keyCode === 8) {
     const previousElement = form[index - 1];
     const currElement = form[index].value;
-    if (previousElement !== undefined && currElement === "") {
+    if (
+      (previousElement !== undefined && currElement === "") ||
+      currElement === "Signup" ||
+      currElement === "Login"
+    ) {
       previousElement.focus();
       previousElement.select();
     }
