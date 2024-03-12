@@ -208,8 +208,6 @@ const Header = (props) => {
           <Typography
             variant="h5"
             noWrap
-            component="a"
-            href="/"
             sx={{
               mr: 2,
               display: { xs: "none", sm: "none", md: "flex" },
@@ -218,6 +216,7 @@ const Header = (props) => {
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
+              cursor: "default",
             }}
           >
             FiTnEsScLuB
@@ -290,8 +289,6 @@ const Header = (props) => {
           <Typography
             variant="h6"
             noWrap
-            component="a"
-            href=""
             sx={{
               mr: 2,
               display: { xs: "flex", sm: "flex", md: "none" },

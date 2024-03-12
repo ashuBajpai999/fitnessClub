@@ -5,6 +5,7 @@ import AboutJpg from "../../../images/Carausel_1.webp";
 import PlateJpg from "../../../images/Carausel_2.webp";
 import OptionJpg from "../../../images/Carausel_3.webp";
 import gymImg from "../../../images/Carousel_1.webp";
+import "../../../App.css";
 import Ganesha from "../../../images/GanehshaInMiddle.webp";
 
 const Carousel = () => {
@@ -84,6 +85,7 @@ const Carousel = () => {
           <motion.img
             key={currentIndex}
             src={images[currentIndex]}
+            className="carasoulImages"
             initial={direction === "right" ? "hiddenRight" : "hiddenLeft"}
             animate="visible"
             exit="exit"
