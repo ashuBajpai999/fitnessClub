@@ -6,7 +6,7 @@ const AboutUs = () => {
     <Fragment>
       <Grid container>
         <Grid item>
-          <p class="AboutUs">
+          <p className="AboutUs">
             Welcome to <span>Fitness Club</span> Gym! Our mission is to provide
             a safe and supportive environment where people of all fitness levels
             can achieve their health and wellness goals. We believe that fitness

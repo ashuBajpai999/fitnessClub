@@ -51,21 +51,6 @@ span {
   height: 68vh;
   width: 46vw;
 }
-.footer {
-  background-color: black;
-  color: #61dafb;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-@media screen and (max-width: 600px) {
-  .footerLink {
-    margin-left: 50;
-  }
-}
-
-.footerText {
-  color: white;
-}
 
 .icon:hover {
   font-size: 40px;
@@ -556,7 +541,7 @@ span {
   }
 }
 
-/* Start Sign In Form CSS*/
+/* #region Start Sign In Form CSS*/
 
 .signInContainer {
   background: #23242a;
@@ -568,7 +553,7 @@ span {
 
 .signInBox {
   background: #1c1c1c;
-  width: 380px;
+  width: 380px !important;
   height: 420px;
   position: relative;
   border-radius: 8px;
@@ -613,6 +598,7 @@ span {
 .signInForm {
   inset: 2px;
   z-index: 10;
+  width: auto !important;
   position: absolute;
   background: #28292d;
   border-radius: 8px;
@@ -703,7 +689,7 @@ span {
   color: #45f3ff;
 }
 
-input[type="submit"] {
+#signInButton {
   border: none;
   outline: none;
   background: rgb(143, 143, 143);
@@ -714,6 +700,8 @@ input[type="submit"] {
   font-weight: 600;
   cursor: pointer;
 }
+
+/* #endregion */
 
 input[type="submit"]:focus {
   background: #45f3ff;
@@ -726,3 +714,67 @@ input[type="submit"]:active {
 .carasoulImages {
   object-fit: cover;
 }
+
+/* #region Footer CSS Start */
+
+.footerText .text {
+  color: aqua;
+  font-size: clamp(0.5rem, 3.5vw, 1.1rem) !important;
+}
+
+.footerText .name {
+  color: gold;
+  font-size: clamp(0.5rem, 3.5vw, 1.1rem) !important;
+}
+
+.footer {
+  background-color: black;
+  height: auto;
+  padding: 20px 0px;
+}
+
+.address {
+  text-align: center;
+}
+
+.footer .address,
+.mailLink,
+.contactMe,
+.socialAddress {
+  font-size: clamp(0.5rem, 3.5vw, 1.1rem) !important;
+}
+
+.verticalDivider {
+  width: 1.5px;
+  /* height: 110px; */
+  background-color: aqua;
+}
+
+.horizontalDivider {
+  height: 1.5px;
+  background-color: aqua;
+}
+
+.icon {
+  color: aqua;
+}
+
+.modalText span {
+  color: #000;
+}
+
+.footerSpan {
+  color: aqua;
+}
+
+.txtCenter {
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .footerLink {
+    margin-left: 50;
+  }
+}
+
+/* #endregion */

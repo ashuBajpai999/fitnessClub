@@ -109,6 +109,7 @@ const Home = () => {
                   item
                   md={1.2}
                   xs={4}
+                  textAlign="end"
                   sx={{ mt: { md: 0.5, xs: 0, sm: 0 } }}
                 >
                   <Button
@@ -117,7 +118,7 @@ const Home = () => {
                     onClick={(e) => {
                       openPage(e);
                     }}
-                    sx={{ color: "blue", fontWeight: 550 }}
+                    sx={{ color: "blue", fontWeight: 550}}
                   >
                     See all &gt;{">"}
                   </Button>
