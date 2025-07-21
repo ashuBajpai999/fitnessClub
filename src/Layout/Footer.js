@@ -35,31 +35,7 @@ const Footer = () => {
       )}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   return (
     <Grid container className="footer">
-      <Grid item xs={12} md={2.5} sm={5}>
-        <Grid
-          container
-          display="flex"
-          justifyContent="space-evenly"
-          alignItems="center"
-        >
-          <Grid item xs={12} color="aqua" className="address">
-            <p
-              style={{
-                color: "goldenrod",
-                fontStyle: "oblique",
-              }}
-            >
-              ADDRESS
-            </p>
-            <p>Azad Nagar, Shuklaganj,</p>
-            <p> Unnao 209861</p>
-          </Grid>
-        </Grid>
-      </Grid>
-      <Grid item className="verticalDivider">
-        <Divider orientation="vertical" />
-      </Grid>
-      <Grid item xs={12} md={4} sm={5}>
+      <Grid item xs={12} md={3.5} sm={5}>
         <Grid
           container
           display="flex"
@@ -119,11 +95,13 @@ const Footer = () => {
       </Grid>
       <Grid
         item
+        xs={10}
+        md={0.02}
         className={isMdScreen ? "verticalDivider" : "horizontalDivider"}
       >
         <Divider orientation="vertical" />
       </Grid>
-      <Grid item xs={12} md={2} sm={12}>
+      <Grid item xs={12} md={3.5} sm={12}>
         <Grid
           container
           display="flex"
@@ -157,7 +135,7 @@ const Footer = () => {
       </Grid>
       <Grid
         item
-        xs={12}
+        xs={10}
         md={0.02}
         className={isMdScreen ? "verticalDivider" : "horizontalDivider"}
       >
@@ -166,7 +144,7 @@ const Footer = () => {
           variant={isMdScreen ? "fullWidth" : "middle"}
         />
       </Grid>
-      <Grid item xs={12} md={3} sm={12}>
+      <Grid item xs={12} md={3.5} sm={12}>
         <Grid
           container
           display="flex"
@@ -179,7 +157,7 @@ const Footer = () => {
             sx={{ textAlign: "center" }}
             className="footerText"
           >
-            <p className="text">Copyright © 2025 reserved Designed By</p>
+            <p className="text">© 2025 Fitness Club - All rights reserved. </p>
             <span className="name"> Ashutosh Bajpai ❤</span>
           </Grid>
         </Grid>

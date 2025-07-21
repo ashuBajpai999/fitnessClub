@@ -14,11 +14,7 @@ const MainDashboard = () => {
       </Grid>
 
       <Outlet />
-      <Grid container className="footer">
-        <Grid item md={12} xs={12} sm={12} marginLeft={5}>
-          <Footer />
-        </Grid>
-      </Grid>
+      <Footer />
     </Fragment>
   );
 };

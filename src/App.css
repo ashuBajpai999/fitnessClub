@@ -731,13 +731,10 @@ input[type="submit"]:active {
   background-color: black;
   height: auto;
   padding: 20px 0px;
+  justify-content: center;
 }
 
-.address {
-  text-align: center;
-}
-
-.footer .address,
+.footer
 .mailLink,
 .contactMe,
 .socialAddress {
